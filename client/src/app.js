@@ -15,5 +15,5 @@ selectView.bindEvents();
 
 const countries = new Countries();
 countries.getData();
-// countries.bindEvents();
+countries.bindEvents();
 })

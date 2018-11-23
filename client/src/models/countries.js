@@ -25,7 +25,13 @@ Countries.prototype.handleData = function (countries) {
 };
 
 Countries.prototype.bindEvents = function () {
-
+  PubSub.subscribe('SelectView:country-name-selected', (evt) => {
+    const request = new RequestHelper(`/api/geography_api/${evt.detail}`);
+    const country = request.get()
+    .then((country) => {
+      PubSub.publish('Countries:selected-country-ready', country);
+    })
+  })
 };
 
 module.exports = Countries
