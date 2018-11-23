@@ -12,10 +12,10 @@ app.use(parser.json());
 
 MongoClient.connect('mongodb://localhost:27017')
   .then((client) => {
-    const db = client.db('....dbname....');
-    const collection = db.collection('...collectionname....');
+    const db = client.db('countriesdb');
+    const collection = db.collection('countries');
     const router = createRouter(collection)
-    app.use('/api/.............', router);
+    app.use('/api/geography_api', router);
   })
   .catch(console.err);
 
