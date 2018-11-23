@@ -1,40 +1,61 @@
+*{
+}
+
+html {
+  /* height: 100%;
+  width: 100%; */
+
+
+}
+
+
 body {
-  margin: 40px;
+  min-height: 100%;
+  min-width: 100%;
 }
 .wrapper {
 		display: grid;
-    grid-gap: 10px;
+    grid-gap: 5px;
 		grid-template-columns: repeat(auto-fill, minmax(5, 1fr) ) ;
-    grid-template-rows: repeat( 8, 1fr);
-
+    grid-template-rows: repeat(12, 1fr);
+    width: 97vw;
+    height: 97vh;
 		background-color: #fff;
 		color: #444;
+    margin: 20px;
+
 	}
 
 	.box {
 		background-color: #444;
 		color: #fff;
 		border-radius: 5px;
-		padding: 20px;
+		padding: 10px;
 		font-size: 150%;
-
 	}
 
 .a {
   grid-column: auto / span 5;
 }
+.g {
+  grid-column: auto / span 5;
+  grid-row: auto / span 2;
 
-.i {
+
+}
+
+.j {
   grid-column: auto / span 5;
     grid-row: auto / span 1;
 
+
 }
 
-.g {
-  grid-column: auto / span 3;
-  grid-row: auto / span 5;
-}
 .h {
   grid-column: auto / span 2;
-  grid-row: auto / span 5;
+  grid-row: auto / span 7;
+}
+.i {
+  grid-column: auto / span 3;
+  grid-row: auto / span 7;
 }
