@@ -24,4 +24,8 @@ Countries.prototype.handleData = function (countries) {
   return countryNames;
 };
 
+Countries.prototype.bindEvents = function () {
+
+};
+
 module.exports = Countries

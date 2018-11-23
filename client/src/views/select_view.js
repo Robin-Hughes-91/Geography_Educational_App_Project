@@ -7,7 +7,11 @@ const SelectView = function (selectElement) {
 SelectView.prototype.bindEvents = function () {
   PubSub.subscribe('Countries:country_names_ready', (evt) => {
     this.populate(evt.detail);
-  })
+  });
+
+  this.selectElement.addEventListener('change', (evt) => {
+    PubSub.publish('SelectView:country-name-selected', evt.target.value);
+  });
 };
 
 SelectView.prototype.populate = function (countryNames) {
