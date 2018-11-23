@@ -1,11 +1,9 @@
 *{
+  box-sizing: border-box;
+  padding: 0;
 }
 
 html {
-  /* height: 100%;
-  width: 100%; */
-
-
 }
 
 
@@ -36,21 +34,16 @@ body {
 
 .a {
   grid-column: auto / span 5;
+  grid-row: auto / span 1;
+
 }
 .g {
   grid-column: auto / span 5;
   grid-row: auto / span 2;
-
-
 }
-
 .j {
   grid-column: auto / span 5;
-    grid-row: auto / span 1;
-
-
 }
-
 .h {
   grid-column: auto / span 2;
   grid-row: auto / span 7;
