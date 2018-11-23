@@ -19,7 +19,7 @@ Countries.prototype.getData = function(){
 
 Countries.prototype.handleData = function (countries) {
   const countryNames = countries.map((country) => {
-    return country.species;
+    return country.name;
   })
   return countryNames;
 };
