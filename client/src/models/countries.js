@@ -2,19 +2,19 @@ const RequestHelper = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
 const Countries = function () {
-  this.countries  = []
+  this.countries  = [];
 };
 
 Countries.prototype.getData = function(){
   const request = new RequestHelper('/api/geography_api');
   request.get()
   .then((countries) => {
-  const countryNameIDs = this.handleData(countries);
-  PubSub.publish('Countries:country_names_ready', countryNameIDs);
-  console.log('countryNameIDs from countries.getData', countryNameIDs);
-  const pinnedCountries = this.getPinnedCountries(countries);
-  PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
-  console.log('pinnedCountries from countries.getData', pinnedCountries);
+    const countryNameIDs = this.handleData(countries);
+    PubSub.publish('Countries:country_names_ready', countryNameIDs);
+    console.log('countryNameIDs from countries.getData', countryNameIDs);
+    const pinnedCountries = this.getPinnedCountries(countries);
+    PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
+    console.log('pinnedCountries from countries.getData', pinnedCountries);
   })
   .catch(console.error);
 };
@@ -31,7 +31,7 @@ Countries.prototype.handleData = function (countries) {
 
 Countries.prototype.getPinnedCountries = function (countries) {
   const pinnedCountries = countries.filter((country) => {
-    return country.pinned = true;
+    return country.pinned === true;
   });
   return pinnedCountries;
 };
