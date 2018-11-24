@@ -10,13 +10,14 @@ html {
 body {
   min-height: 100%;
   min-width: 100%;
+  margin: auto;
 }
 .wrapper {
 		display: grid;
     grid-gap: 5px;
 		grid-template-columns: repeat(auto-fill, minmax(5, 1fr) ) ;
-    grid-template-rows: repeat(12, 1fr);
-    width: 97vw;
+    grid-template-rows: repeat(20, 100px);
+    width: 96vw;
     height: 97vh;
 		background-color: #fff;
 		color: #444;
@@ -42,13 +43,21 @@ body {
   grid-row: auto / span 2;
 }
 .j {
-  grid-column: auto / span 5;
+  grid-column: auto / span 2;
+  grid-row: auto / span 5;
 }
 .h {
   grid-column: auto / span 2;
-  grid-row: auto / span 7;
+  grid-row: auto / span 5;
 }
 .i {
   grid-column: auto / span 3;
-  grid-row: auto / span 7;
+  grid-row: auto / span 5;
+}
+.k {
+  grid-column: auto / span 3;
+  grid-row: auto / span 5;
+}
+.l {
+grid-column: auto / span 5;
 }
