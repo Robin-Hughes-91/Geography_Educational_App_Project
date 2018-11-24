@@ -9,9 +9,9 @@ Countries.prototype.getData = function(){
   const request = new RequestHelper('/api/geography_api');
   request.get()
   .then((countries) => {
-  const countryNames = this.handleData(countries);
-  PubSub.publish('Countries:country_names_ready', countryNames);
-  console.log(countryNames);
+  const countryNameIDs = this.handleData(countries);
+  PubSub.publish('Countries:country_names_ready', countryNameIDs);
+  console.log(countryNameIDs);
 
   })
   .catch(console.error);
@@ -34,6 +34,20 @@ Countries.prototype.bindEvents = function () {
     .then((country) => {
       PubSub.publish('Countries:selected-country-ready', country);
     })
+  })
+};
+
+Countries.prototype.addPinnedCountry = function () {
+  PubSub.subscribe('CountryView:add-to-pinned-clicked', (evt) => {
+    const request = new RequestHelper('/api/geography_api/pinned');
+    const countryPayload = evt.detail;
+    delete countryPayload._id;
+    countryPayload.pinned = true;
+    request.put(evt.detail.id, countryPayload)
+      .then((pinnedCountries) => {
+        PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
+        console.log('pinnedCountries from Countries.addPinnedCountry', pinnedCountries);
+      });
   })
 };
 
