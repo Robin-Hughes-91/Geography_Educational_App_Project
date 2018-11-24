@@ -14,12 +14,12 @@ SelectView.prototype.bindEvents = function () {
   });
 };
 
-SelectView.prototype.populate = function (countryNames) {
-  countryNames.forEach((countryName) => {
+SelectView.prototype.populate = function (countryObjects) {
+  countryObjects.forEach((countryObject) => {
     const option = document.createElement('option');
     option.classList.add('country-select-option');
-    option.value = countryName;
-    option.textContent = countryName;
+    option.value = countryObject.id;
+    option.textContent = countryObject.name;
     this.selectElement.appendChild(option);
   });
 };

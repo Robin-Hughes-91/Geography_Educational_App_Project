@@ -18,10 +18,13 @@ Countries.prototype.getData = function(){
 };
 
 Countries.prototype.handleData = function (countries) {
-  const countryNames = countries.map((country) => {
-    return country.name;
+  const countryNameIDs = countries.map((country) => {
+    return {
+      id: country._id,
+      name: country.name
+    }
   })
-  return countryNames;
+  return countryNameIDs;
 };
 
 Countries.prototype.bindEvents = function () {
