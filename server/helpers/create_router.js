@@ -17,10 +17,10 @@ const createRouter = function (collection) {
       });
   });
 
-  router.get('/:countryName', (req, res) => {
-    const countryName = req.params.countryName;
+  router.get('/:id', (req, res) => {
+    const id = req.params.id;
     collection
-      .findOne({ name: countryName })
+      .findOne({ _id: ObjectID(id) })
       .then((doc) => res.json(doc))
       .catch((err) => {
         console.error(err);
