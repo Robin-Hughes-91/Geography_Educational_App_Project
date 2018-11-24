@@ -11,8 +11,10 @@ Countries.prototype.getData = function(){
   .then((countries) => {
   const countryNameIDs = this.handleData(countries);
   PubSub.publish('Countries:country_names_ready', countryNameIDs);
-  console.log(countryNameIDs);
-
+  console.log('countryNameIDs from countries.getData', countryNameIDs);
+  const pinnedCountries = this.getPinnedCountries(countries);
+  PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
+  console.log('pinnedCountries from countries.getData', pinnedCountries);
   })
   .catch(console.error);
 };
@@ -25,6 +27,13 @@ Countries.prototype.handleData = function (countries) {
     }
   })
   return countryNameIDs;
+};
+
+Countries.prototype.getPinnedCountries = function (countries) {
+  const pinnedCountries = countries.filter((country) => {
+    return country.pinned = true;
+  });
+  return pinnedCountries;
 };
 
 Countries.prototype.bindEvents = function () {
@@ -40,15 +49,20 @@ Countries.prototype.bindEvents = function () {
 Countries.prototype.addPinnedCountry = function () {
   PubSub.subscribe('CountryView:add-to-pinned-clicked', (evt) => {
     const request = new RequestHelper('/api/geography_api/pinned');
-    const countryPayload = evt.detail;
-    delete countryPayload._id;
-    countryPayload.pinned = true;
-    request.put(evt.detail.id, countryPayload)
+    const pinnedCountry = this.preparePinnedCountry(evt.detail);
+    request.put(evt.detail.id, pinnedCountry)
       .then((pinnedCountries) => {
         PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
         console.log('pinnedCountries from Countries.addPinnedCountry', pinnedCountries);
       });
   })
+};
+
+Countries.prototype.preparePinnedCountry = function (country) {
+  const pinnedCountry = country;
+  delete pinnedCountry._id;
+  country.pinned = true;
+  return pinnedCountry;
 };
 
 module.exports = Countries
