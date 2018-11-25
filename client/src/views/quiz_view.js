@@ -18,8 +18,6 @@ QuizView.prototype.createFlag = function (country) {
   console.log(country);
   const picture = document.createElement('img');
   picture.setAttribute('src', `${country.flag}`);
-  picture.setAttribute("height", "50");
-  picture.setAttribute("width", "100");
   picture.setAttribute("name", `${country.name}`);
   console.log(picture);
   picture.addEventListener('click', (evt) => {
