@@ -1,8 +1,10 @@
 const PubSub = require('../helpers/pub_sub.js');
 
 const CountryView = function (container) {
-  this.container = document.getElementsByClassName('#wrapper');
-  this.flagBox = document.getElementsByClassName('#box-c')
+  this.container = document.getElementsByClassName('wrapper');
+  console.log('container', container);
+  this.flagBox = document.getElementsByClassName('box-c');
+  console.log('flagBox', flagBox);
 }
 
 CountryView.prototype.bindEvents = function () {
@@ -12,7 +14,7 @@ CountryView.prototype.bindEvents = function () {
   });
 }
 
-CountryView.prototype.render = function (countries) {
+CountryView.prototype.render = function (country) {
   const flagImage = document.createElement('img');
   flagImage.src = country.flag;
   this.flagBox.appendChild(flagImage);
