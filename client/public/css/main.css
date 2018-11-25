@@ -20,6 +20,12 @@ body {
 
 	}
 
+.flag {
+  width: 58;
+  height: 58;
+
+}
+
 .a {
   grid-column: auto / span 5;
 }
