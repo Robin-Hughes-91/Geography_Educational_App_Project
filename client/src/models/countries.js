@@ -45,6 +45,7 @@ Countries.prototype.bindEvents = function () {
   });
 
   this.removePinnedCountry();
+  this.addNotes();
 };
 
 Countries.prototype.addPinnedCountry = function () {
@@ -69,6 +70,19 @@ Countries.prototype.removePinnedCountry = function () {
         PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
       })
   });
+};
+
+Countries.prototype.addNotes = function () {
+  PubSub.subscribe('PinnedCountryView:notes-submitted', (evt) => {
+    const request = new RequestHelper('/api/geography_api/pinned');
+    const countryId = evt.detail._id;
+    const country = evt.detail;
+    delete country._id;
+    request.put(countryId, country)
+      .then((pinnedCountries) => {
+        PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
+      })
+  })
 };
 
 Countries.prototype.preparePinnedCountry = function (country, pinnedBoolean) {
