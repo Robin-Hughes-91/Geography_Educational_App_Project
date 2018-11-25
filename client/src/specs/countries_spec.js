@@ -38,8 +38,8 @@ describe('Countries', function() {
     }]);
   });
 
-  it('should be able to add pinned property to a country and remove id', function() {
-    const pinnedCountry = countries.preparePinnedCountry(countryAfg);
+  it('should be able to add pinned property of true to a country and remove id', function() {
+    const pinnedCountry = countries.preparePinnedCountry(countryAfg, true);
     assert.deepStrictEqual(pinnedCountry, {
     	"name": "Afghanistan",
     	"alpha3Code": "AFG",
@@ -48,8 +48,18 @@ describe('Countries', function() {
     });
   });
 
+  it('should be able to add pinned property of false to a country and remove id', function() {
+    const pinnedCountry = countries.preparePinnedCountry(countryAfg, false);
+    assert.deepStrictEqual(pinnedCountry, {
+    	"name": "Afghanistan",
+    	"alpha3Code": "AFG",
+    	"capital": "Kabul",
+      "pinned": false
+    });
+  });
+
   it('should be able to return pinned countries only', function() {
-    const afgPinned = countries.preparePinnedCountry(countryAfg);
+    const afgPinned = countries.preparePinnedCountry(countryAfg, true);
     const pinnedCountries = countries.getPinnedCountries([afgPinned, countryBra]);
     assert.deepStrictEqual(pinnedCountries, [afgPinned]);
   });

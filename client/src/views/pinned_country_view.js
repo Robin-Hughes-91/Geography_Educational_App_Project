@@ -6,7 +6,6 @@ const PinnedCountryView =  function (container, country) {
 };
 
 PinnedCountryView.prototype.render = function () {
-  console.log('this.country from pinnedview render', this.country);
   const countryContainer = this.createDiv('pinned-country-container');
   const countryName = this.createTextElement('p', this.country.name, 'pinned-country-name');
   const showInfo = this.createButton('Show Country Info', 'pinned-country-show-info-button');
@@ -30,7 +29,6 @@ PinnedCountryView.prototype.createRemoveButton = function () {
   const removeButton = this.createButton('Remove from pinned countries', 'pinned-country-remove-button');
   removeButton.addEventListener('click', (event) => {
     PubSub.publish('PinnedCountryView:remove-button-clicked', this.country);
-    console.log('this.country from createRemoveButton', this.country);
   });
   return removeButton;
 };
