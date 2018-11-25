@@ -7,36 +7,28 @@ const PinnedCountryView =  function (container, country) {
 
 PinnedCountryView.prototype.render = function () {
   const countryContainer = this.createDiv('pinned-country-container');
-  const countryName = this.createButton(this.country.name, 'pinned-country-name');
   const details = this.renderDetails();
+  const countryName = this.createCollapsibleButton(this.country.name, 'pinned-country-name', details);
   countryContainer.appendChild(countryName);
   countryContainer.appendChild(details);
-  countryName.addEventListener('click', () => {
-    if (details.style.display === "block") {
-      details.style.display = "none";
-    } else {
-      details.style.display = "block";
-    }
-  });
   this.container.appendChild(countryContainer);
 };
 
 PinnedCountryView.prototype.renderDetails = function () {
   const details = this.createDiv('pinned-country-details');
-  const notesFormHeading = this.createTextElement('p', 'Add your own notes on this country', 'pinned-country-notes-heading');
   const notesForm = this.createNotesForm();
+  const notesFormHeading = this.createCollapsibleButton('Add / Change Notes', 'pinned-country-notes-heading', notesForm);
   const notesHeading = this.createTextElement('p', 'Notes', 'pinned-country-notes-heading');
   const notes = this.createTextElement('p', this.country.notes, 'pinned-country-notes');
+  this.notes = notes;
   const showInfoButton = this.createShowInfoButton();
   const removeButton = this.createRemoveButton();
-
-  details.appendChild(notesFormHeading);
-  details.appendChild(notesForm);
+  details.appendChild(showInfoButton);
   details.appendChild(notesHeading);
   details.appendChild(notes);
-  details.appendChild(showInfoButton);
+  details.appendChild(notesFormHeading);
+  details.appendChild(notesForm);
   details.appendChild(removeButton);
-
   return details;
 };
 
@@ -61,6 +53,19 @@ PinnedCountryView.prototype.createShowInfoButton = function () {
     PubSub.publish('Countries:selected-country-ready', this.country);
   });
   return showInfoButton;
+};
+
+PinnedCountryView.prototype.createCollapsibleButton = function (textContent, cssClass, targetElement) {
+  const collapsibleButton = this.createButton(textContent, cssClass);
+  collapsibleButton.addEventListener('click', () => {
+    if (targetElement.style.display === "block") {
+      targetElement.style.display = "none";
+    } else {
+      targetElement.style.display = "block";
+    }
+  });
+  return collapsibleButton;
+  // targetElement MUST have (default) css display property set in stylesheet to none
 };
 
 PinnedCountryView.prototype.createTextElement = function (type, textContent, cssClass) {
@@ -99,7 +104,10 @@ PinnedCountryView.prototype.handleSubmit = function (evt) {
   evt.preventDefault();
   this.country.notes = evt.target.notes.value;
   PubSub.publish('PinnedCountryView:notes-submitted', this.country);
+  // const newNotes = document.querySelector('.pinned-country-notes');
+  this.notes.textContent = this.country.notes;
   evt.target.reset();
+  // evt.target.style.display = "none";
 };
 
 module.exports = PinnedCountryView;

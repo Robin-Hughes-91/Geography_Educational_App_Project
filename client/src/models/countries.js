@@ -78,10 +78,10 @@ Countries.prototype.addNotes = function () {
     const countryId = evt.detail._id;
     const country = evt.detail;
     delete country._id;
-    request.put(countryId, country)
-      .then((pinnedCountries) => {
-        PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
-      })
+    request.put(countryId, country);
+      // .then((pinnedCountries) => {
+      //   PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
+      // })
   })
 };
 

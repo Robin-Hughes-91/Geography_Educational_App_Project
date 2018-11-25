@@ -11,9 +11,15 @@
 .pinned-countries-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
 }
 
 .pinned-country-details {
+  display: none;
+  overflow: hidden;
+}
+
+.notes-form-wrapper {
   display: none;
   overflow: hidden;
 }
