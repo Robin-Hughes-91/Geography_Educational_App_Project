@@ -11,10 +11,9 @@ Countries.prototype.getData = function(){
   .then((countries) => {
     const countryNameIDs = this.handleData(countries);
     PubSub.publish('Countries:country_names_ready', countryNameIDs);
-    console.log('countryNameIDs from countries.getData', countryNameIDs);
+
     const pinnedCountries = this.getPinnedCountries(countries);
     PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
-    console.log('pinnedCountries from countries.getData', pinnedCountries);
   })
   .catch(console.error);
 };
@@ -43,25 +42,39 @@ Countries.prototype.bindEvents = function () {
     .then((country) => {
       PubSub.publish('Countries:selected-country-ready', country);
     })
-  })
+  });
+
+  this.removePinnedCountry();
 };
 
 Countries.prototype.addPinnedCountry = function () {
   PubSub.subscribe('CountryView:add-to-pinned-clicked', (evt) => {
     const request = new RequestHelper('/api/geography_api/pinned');
-    const pinnedCountry = this.preparePinnedCountry(evt.detail);
-    request.put(evt.detail.id, pinnedCountry)
+    const pinnedCountryId = evt.detail._id;
+    const pinnedCountry = this.preparePinnedCountry(evt.detail, true);
+    request.put(pinnedCountryId, pinnedCountry)
       .then((pinnedCountries) => {
         PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
-        console.log('pinnedCountries from Countries.addPinnedCountry', pinnedCountries);
       });
-  })
+  });
 };
 
-Countries.prototype.preparePinnedCountry = function (country) {
+Countries.prototype.removePinnedCountry = function () {
+  PubSub.subscribe('PinnedCountryView:remove-button-clicked', (evt) => {
+    const request = new RequestHelper('/api/geography_api/pinned');
+    const removedCountryId = evt.detail._id;
+    const removedCountry = this.preparePinnedCountry(evt.detail, false);
+    request.put(removedCountryId, removedCountry)
+      .then((pinnedCountries) => {
+        PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
+      })
+  });
+};
+
+Countries.prototype.preparePinnedCountry = function (country, pinnedBoolean) {
   const pinnedCountry = country;
   delete pinnedCountry._id;
-  country.pinned = true;
+  country.pinned = pinnedBoolean;
   return pinnedCountry;
 };
 

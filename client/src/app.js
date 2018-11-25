@@ -14,7 +14,7 @@ const selectDropdown = document.querySelector('.country-select');
 const selectView = new SelectView(selectDropdown);
 selectView.bindEvents();
 
-const pinnedCountriesContainer = document.querySelector('.pinned-countries');
+const pinnedCountriesContainer = document.querySelector('.pinned-countries-list');
 const pinnedCountryListView = new PinnedCountryListView(pinnedCountriesContainer);
 pinnedCountryListView.bindEvents();
 
