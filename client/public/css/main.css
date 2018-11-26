@@ -21,9 +21,7 @@ body {
 	}
 
 .flag {
-  width: 30;
-  height: 30;
-
+  max-width: 150px;
 }
 
 .a {

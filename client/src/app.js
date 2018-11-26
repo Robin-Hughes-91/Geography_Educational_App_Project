@@ -1,6 +1,7 @@
 const Countries = require('./models/countries.js');
-const CountryView = require('./views/country_view.js');
+const CountryFlagView = require('./views/country_flag_view.js');
 const SelectView = require('./views/select_view.js');
+const CountryInfoView = require('./views/country_info_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 // document.querySelector('');
@@ -22,8 +23,10 @@ selectView.bindEvents();
 const countryContainer = document.querySelector('.wrapper');
 const flagBox = document.querySelector('.flag');
 console.log('app flagbox', flagBox);
-const countryView = new CountryView(countryContainer, flagBox);
-countryView.bindEvents();
+const countryFlagView = new CountryFlagView(countryContainer, flagBox);
+countryFlagView.bindEvents();
 
-
+const countryInfoContainer = document.querySelector('.g');
+const countryInfoView = new CountryInfoView (countryInfoContainer);
+countryInfoView.bindEvents();
 })

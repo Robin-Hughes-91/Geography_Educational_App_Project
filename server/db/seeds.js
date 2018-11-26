@@ -1,7 +1,7 @@
 use countriesdb;
 db.dropDatabase();
 
-db.countries.insertMany([
+db.countries.insertMany ([
 
   {
   "name": "Afghanistan",
