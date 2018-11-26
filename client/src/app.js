@@ -11,9 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // const  = new ();
 //  .bindEvents();
 
-const quizDiv = document.querySelector('.box.j')
-const quizView = new QuizGridView(quizDiv);
-quizView.bindEvents();
+
 
 const selectDropdown = document.querySelector('.country-select');
 const selectView = new SelectView(selectDropdown);
@@ -23,6 +21,10 @@ const countries = new Countries();
 countries.getData();
 countries.getAllData();
 countries.bindEvents();
+
+const quizDiv = document.querySelector('.box.j')
+const quizView = new QuizGridView(quizDiv);
+quizView.bindEvents();
 
 
 })

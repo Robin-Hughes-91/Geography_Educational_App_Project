@@ -6,13 +6,18 @@ const QuizView = function (container) {
 
 
 QuizView.prototype.render = function (country) {
+  console.log(country);
 
-  const quizContainer = document.createElement('div');
-  quizContainer.id = 'quiz_item';
 
+  const flagContainer = document.createElement('div');
+  flagContainer.id = 'flag_item';
   const flag = this.createFlag(country);
-  this.container.appendChild(quizContainer);
+  flagContainer.appendChild(flag);
+  this.container.appendChild(flagContainer);
 };
+
+
+
 
 QuizView.prototype.createFlag = function (country) {
   console.log(country);
@@ -24,12 +29,8 @@ QuizView.prototype.createFlag = function (country) {
   PubSub.publish('QuizView:quiz-item-clicked', evt.target.name);
   console.log(evt.target.name);
   });
-  this.container.appendChild(picture);
   return picture;
 };
-
-
-
 
 
 module.exports = QuizView;
