@@ -16,12 +16,6 @@ const countries = new Countries();
 countries.getData();
 countries.bindEvents();
 
-const selectDropdown = document.querySelector('.country-select');
-const selectView = new SelectView(selectDropdown);
-selectView.bindEvents();
-
-
-
 const countryContainer = document.querySelector('.wrapper');
 const flagBox = document.querySelector('.flag');
 console.log('app flagbox', flagBox);
