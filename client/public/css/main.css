@@ -1,23 +1,36 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+}
+
+
 body {
-  margin: 40px;
+  min-height: 100%;
+  min-width: 100%;
+  margin: auto;
 }
 .wrapper {
 		display: grid;
-    grid-gap: 10px;
+    grid-gap: 5px;
 		grid-template-columns: repeat(auto-fill, minmax(5, 1fr) ) ;
-    grid-template-rows: repeat( 7, 1fr);
-
+    grid-template-rows: repeat(20, 100px);
+    width: 96vw;
+    height: 97vh;
 		background-color: #fff;
 		color: #444;
+    margin: 20px;
+
 	}
 
 	.box {
 		background-color: #444;
 		color: #fff;
 		border-radius: 5px;
-		padding: 20px;
+		padding: 10px;
 		font-size: 150%;
-
 	}
 
 .flag {
@@ -26,19 +39,28 @@ body {
 
 .a {
   grid-column: auto / span 5;
+  grid-row: auto / span 1;
 }
-
-.i {
-  grid-column: auto / span 5;
-    grid-row: auto / span 1;
-
-}
-
 .g {
-  grid-column: auto / span 3;
+  grid-column: auto / span 5;
+  grid-row: auto / span 2;
+}
+.j {
+  grid-column: auto / span 2;
   grid-row: auto / span 5;
 }
 .h {
   grid-column: auto / span 2;
   grid-row: auto / span 5;
+}
+.i {
+  grid-column: auto / span 3;
+  grid-row: auto / span 5;
+}
+.k {
+  grid-column: auto / span 3;
+  grid-row: auto / span 5;
+}
+.l {
+grid-column: auto / span 5;
 }

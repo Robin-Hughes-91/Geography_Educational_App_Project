@@ -10,7 +10,6 @@ SelectView.prototype.bindEvents = function () {
   });
 
   this.selectElement.addEventListener('change', (evt) => {
-    console.log(evt.target.value);
     PubSub.publish('SelectView:country-name-selected', evt.target.value);
   });
 };

@@ -33,7 +33,6 @@ Countries.prototype.bindEvents = function () {
     const request = new RequestHelper(`/api/geography_api/${evt.detail}`);
     const country = request.get()
     .then((country) => {
-      console.log(country);
       PubSub.publish('Countries:selected-country-ready', country);
     })
   })

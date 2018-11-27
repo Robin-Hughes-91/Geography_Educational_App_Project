@@ -1,6 +1,5 @@
 use countriesdb;
 db.dropDatabase();
-
 db.countries.insertMany ([
 
   {
