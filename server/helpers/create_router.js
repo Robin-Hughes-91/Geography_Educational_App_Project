@@ -72,6 +72,23 @@ const createRouter = function (collection) {
       });
   });
 
+  router.put('/pinned/:id', (req, res) => {
+    const id = req.params.id;
+    const updatedData = req.body;
+    collection
+      .updateOne(
+        { _id: ObjectID(id) },
+        { $set: updatedData }
+      )
+      .then(() => collection.find({pinned: true}).toArray())
+      .then((docs) => res.json(docs))
+      .catch((err) => {
+        console.error(err);
+        res.status(500);
+        res.json({ status: 500, error: err });
+      });
+  });
+
   return router;
 
 };

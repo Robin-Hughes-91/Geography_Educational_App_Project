@@ -76,7 +76,7 @@ body {
   grid-column: auto / span 3;
   grid-row: auto / span 5;
 }
-.k {
+.pinned-countries {
   grid-column: auto / span 3;
   grid-row: auto / span 5;
 }

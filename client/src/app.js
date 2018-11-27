@@ -4,10 +4,8 @@ const QuizGridView = require('./views/quiz_grid_view.js');
 const CountryFlagView = require('./views/country_flag_view.js');
 const SelectView = require('./views/select_view.js');
 const CountryInfoView = require('./views/country_info_view.js');
-
 const MapView = require('./views/map_view.js');
-
-
+const PinnedCountryListView = require('./views/pinned_country_list_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 // document.querySelector('');
@@ -23,6 +21,10 @@ selectView.bindEvents();
 const mapDiv = document.querySelector('#mapid')
 const mapView = new MapView(mapDiv);
 mapView.bindEvents();
+
+const pinnedCountriesContainer = document.querySelector('.pinned-countries-list');
+const pinnedCountryListView = new PinnedCountryListView(pinnedCountriesContainer);
+pinnedCountryListView.bindEvents();
 
 const countries = new Countries();
 countries.getData();
