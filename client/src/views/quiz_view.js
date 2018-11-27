@@ -13,7 +13,7 @@ QuizView.prototype.render = function (country) {
   // const flagContainer = document.createElement('div');
   // flagContainer.id = 'flag_item';
   const flag = this.createFlag(country);
-  console.log(this.container);
+  // console.log(this.container);
   this.container.appendChild(flag);
 };
 

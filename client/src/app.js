@@ -38,7 +38,7 @@ quizView.bindEvents();
 
 const countryContainer = document.querySelector('.wrapper');
 const flagBox = document.querySelector('.flag');
-console.log('app flagbox', flagBox);
+// console.log('app flagbox', flagBox);
 const countryFlagView = new CountryFlagView(countryContainer, flagBox);
 countryFlagView.bindEvents();
 

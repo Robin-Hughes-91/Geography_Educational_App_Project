@@ -104,10 +104,11 @@ PinnedCountryView.prototype.handleSubmit = function (evt) {
   evt.preventDefault();
   this.country.notes = evt.target.notes.value;
   PubSub.publish('PinnedCountryView:notes-submitted', this.country);
-  // const newNotes = document.querySelector('.pinned-country-notes');
+  PubSub.subscribe('Countries:country-notes-submitted-id', (evt) => {
+    this.country._id = evt.detail;
+  });
   this.notes.textContent = this.country.notes;
   evt.target.reset();
-  // evt.target.style.display = "none";
 };
 
 module.exports = PinnedCountryView;
