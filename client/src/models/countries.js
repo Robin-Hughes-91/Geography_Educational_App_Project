@@ -22,13 +22,24 @@ Countries.prototype.getAllData = function(){
   const request = new RequestHelper('/api/geography_api');
   request.get()
   .then((countries) => {
-    PubSub.publish('Countries:country_data_ready', countries);
-    console.log(countries);
-    const pinnedCountries = this.getPinnedCountries(countries);
-    PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
+  PubSub.publish('Countries:country_data_ready', countries);
+  console.log(countries);
+  const pinnedCountries = this.getPinnedCountries(countries);
+  PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
   })
   .catch(console.error);
 };
+
+Countries.prototype.getNewQuestion = function(){
+  PubSub.subscribe('QuizGridView:refresh_quiz', (evt) => {
+    const request = new RequestHelper('/api/geography_api');
+    request.get()
+    .then((countries) => {
+      PubSub.publish('Countries:country_new_question_ready', countries);
+      console.log(countries);
+    })
+    .catch(console.error);
+  });};
 
 Countries.prototype.handleData = function (countries) {
   const countryNameIDs = countries.map((country) => {

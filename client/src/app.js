@@ -30,6 +30,7 @@ const countries = new Countries();
 countries.getData();
 countries.getAllData();
 countries.bindEvents();
+countries.getNewQuestion();
 
 const quizDiv = document.querySelector('.j')
 const quizView = new QuizGridView(quizDiv);
