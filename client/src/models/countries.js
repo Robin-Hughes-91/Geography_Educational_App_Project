@@ -9,6 +9,7 @@ Countries.prototype.getData = function(){
   const request = new RequestHelper('/api/geography_api');
   request.get()
   .then((countries) => {
+    console.log(countries);
   const countryNames = this.handleData(countries);
   PubSub.publish('Countries:country_names_ready', countryNames);
   console.log(countryNames);

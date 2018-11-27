@@ -33,6 +33,9 @@ body {
 		font-size: 150%;
 	}
 
+.flag {
+  max-width: 150px;
+}
 
 .a {
   grid-column: auto / span 5;
