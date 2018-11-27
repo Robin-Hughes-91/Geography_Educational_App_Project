@@ -9,6 +9,7 @@ Countries.prototype.getData = function(){
   const request = new RequestHelper('/api/geography_api');
   request.get()
   .then((countries) => {
+    console.log(countries);
   const countryNames = this.handleData(countries);
   PubSub.publish('Countries:country_names_ready', countryNames);
   // console.log(countryNames);
@@ -23,6 +24,17 @@ Countries.prototype.getAllData = function(){
   .then((countries) => {
   PubSub.publish('Countries:country_data_ready', countries);
   // console.log(countries);
+
+  })
+  .catch(console.error);
+};
+
+Countries.prototype.getAllData = function(){
+  const request = new RequestHelper('/api/geography_api');
+  request.get()
+  .then((countries) => {
+  PubSub.publish('Countries:country_data_ready', countries);
+  console.log(countries);
 
   })
   .catch(console.error);
@@ -44,7 +56,6 @@ Countries.prototype.bindEvents = function () {
     const country = request.get()
     .then((country) => {
       PubSub.publish('Countries:selected-country-ready', country);
-      // console.log(country);
     })
   })
 };
