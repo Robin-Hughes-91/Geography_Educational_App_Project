@@ -3,7 +3,7 @@ const mapboxgl = require('mapbox-gl');
 const PubSub = require('../helpers/pub_sub.js');
 
 const MapView = function(target) {
-    this.target = target;	
+    this.target = target;
 
 };
 
@@ -11,18 +11,18 @@ const MapView = function(target) {
 MapView.prototype.bindEvents = function () {
     this.addMap([0.5, 0.2], 0.4)
   PubSub.subscribe('Countries:selected-country-ready', (evt) => {
-    console.log('event details' ,evt.detail);
+    // console.log('event details' ,evt.detail);
     country = evt.detail;
 
     const center = country.latlng.reverse();
     const area = country.area;
     const zoom = this.zoomRatio(area);
-    console.log('center', center);
+    // console.log('center', center);
     // const zoom = 4;
     this.addMap(center, zoom);
-    
-   
-   
+
+
+
 
 
     // this.center = evt.detail.lat
@@ -55,10 +55,10 @@ const popup = new mapboxgl.Popup({closeOnClick: false})
 };
 
 MapView.prototype.zoomRatio = function(area) {
-    console.log('area', area)
-    
+    // console.log('area', area)
+
     if (area <= 83871) {zoom = 6;} else {zoom = 1;}
-    console.log('zoom', zoom)
+    // console.log('zoom', zoom)
     return zoom;
 
 };
@@ -92,7 +92,7 @@ MapView.prototype.zoomRatio = function(area) {
 //     // center: this.center
 //     // zoom: this.zoom,
 //     style: 'mapbox://styles/mapbox/streets-v9'
- 
+
 // });
 // this.markers = []
 
@@ -100,9 +100,9 @@ MapView.prototype.zoomRatio = function(area) {
 // };
 
 // get zoom area ratio // map function
-// get a zoom ratio helper function 
+// get a zoom ratio helper function
 // I will do this with conditional login
-// if area size is between this and this - zoom should equal this 
+// if area size is between this and this - zoom should equal this
 
 
 

@@ -67,19 +67,22 @@ Countries.prototype.bindEvents = function () {
     })
   });
 
+  this.addPinnedCountry();
   this.removePinnedCountry();
   this.addNotes();
 };
 
 Countries.prototype.addPinnedCountry = function () {
-  PubSub.subscribe('CountryView:add-to-pinned-clicked', (evt) => {
+  PubSub.subscribe('PinnedCountryAddView:add-to-pinned-clicked', (evt) => {
     const request = new RequestHelper('/api/geography_api/pinned');
     const pinnedCountryId = evt.detail._id;
+    console.log('pinnedCountryId from .addPinnedCountry', pinnedCountryId);
     const pinnedCountry = this.preparePinnedCountry(evt.detail, true);
+    console.log('pinnedCountry from.addPinnedCountry', pinnedCountry);
     request.put(pinnedCountryId, pinnedCountry)
       .then((pinnedCountries) => {
         PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
-      });
+      })
   });
 };
 
