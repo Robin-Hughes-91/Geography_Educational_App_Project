@@ -56,6 +56,12 @@ body {
 .j {
   grid-column: auto / span 2;
   grid-row: auto / span 5;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+
+
 }
 .h {
   grid-column: auto / span 2;
@@ -76,24 +82,43 @@ grid-column: auto / span 5;
 
 #flag_item {
 
-  height: auto;
-  max-width:50%;
-  display: inline-block;
-
+  max-height: 220px;
+  max-width:220px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 30%;
 }
 
-#country-select {
+#answer_item {
+  position: absolute;
+  left: 0;
+  bottom: 70px;
+  right: 0;
+}
+
+#question_item {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+}
+
+p {
+  max-width: 50%;
+  margin: auto;
 }
 
 img {
-  /* max-width: 100%;
-  max-height: 100%; */
+  max-width: 50%;
   object-fit: contain;
-  padding: 3px;
-  width: 100px;
-  height: 40px;
+  padding: 5px;
+  /* max-width: 100px; */
   flex: 25%;
-  max-width:50%;
 
 
 }

@@ -22,7 +22,7 @@ countries.getData();
 countries.getAllData();
 countries.bindEvents();
 
-const quizDiv = document.querySelector('.box.j')
+const quizDiv = document.querySelector('.j')
 const quizView = new QuizGridView(quizDiv);
 quizView.bindEvents();
 
