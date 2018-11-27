@@ -70,6 +70,7 @@ Countries.prototype.bindEvents = function () {
   this.addPinnedCountry();
   this.removePinnedCountry();
   this.addNotes();
+  this.repopulatePinnedCountries();
 };
 
 Countries.prototype.addPinnedCountry = function () {
@@ -108,6 +109,18 @@ Countries.prototype.addNotes = function () {
       .then(() => {
         PubSub.publish('Countries:country-notes-submitted-id', countryId);
       });
+  });
+};
+
+Countries.prototype.repopulatePinnedCountries = function () {
+  PubSub.subscribe('PinnedCountryView:close-details-clicked', () => {
+    const request = new RequestHelper('/api/geography_api');
+    request.get()
+    .then((countries) => {
+      const pinnedCountries = this.getPinnedCountries(countries);
+      PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
+    })
+    .catch(console.error);
   });
 };
 
