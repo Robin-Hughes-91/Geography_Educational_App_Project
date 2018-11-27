@@ -23,21 +23,22 @@ Countries.prototype.getAllData = function(){
   request.get()
   .then((countries) => {
   PubSub.publish('Countries:country_data_ready', countries);
-  // console.log(countries);
+  console.log(countries);
 
   })
   .catch(console.error);
 };
 
-Countries.prototype.getAllData = function(){
-  const request = new RequestHelper('/api/geography_api');
-  request.get()
-  .then((countries) => {
-  PubSub.publish('Countries:country_data_ready', countries);
-  console.log(countries);
-
-  })
-  .catch(console.error);
+Countries.prototype.getNewQuestion = function(){
+  PubSub.subscribe('QuizGridView:refresh_quiz', (evt) => {
+    const request = new RequestHelper('/api/geography_api');
+    request.get()
+    .then((countries) => {
+      PubSub.publish('Countries:country_new_question_ready', countries);
+      console.log(countries);
+    })
+    .catch(console.error);
+  });
 };
 
 Countries.prototype.handleData = function (countries) {

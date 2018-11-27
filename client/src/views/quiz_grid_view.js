@@ -7,13 +7,25 @@ const QuizGridView = function (container) {
 };
 
 QuizGridView.prototype.bindEvents = function () {
+
   PubSub.subscribe('Countries:country_data_ready', (evt) => {
     const random = this.shuffle(evt.detail);
     const flags = this.renderFlags(random);
     const randomCountryForQuestion = this.randomCountry(random);
     const createquestion = this.createQuestion(random);
     const question = this.renderQuestion(random);
-    // const answer = this.checkAnswer(random)
+    this.compareQuestionAnswer()
+
+
+
+  });
+
+  PubSub.subscribe('Countries:country_new_question_ready', (evt) => {
+    const random = this.shuffle(evt.detail);
+    const flags = this.renderFlags(random);
+    const randomCountryForQuestion = this.randomCountry(random);
+    const createquestion = this.createQuestion(random);
+    const question = this.renderQuestion(random);
     this.compareQuestionAnswer()
   });
 };
@@ -43,7 +55,7 @@ QuizGridView.prototype.renderFlags = function (countries) {
 
   const flagContainer = document.createElement('div');
   flagContainer.id = 'flag_item';
-  // this.container.innerHTML = '';
+  this.container.innerHTML = '';
   const quizView = new QuizView(flagContainer);
   // console.log(flagContainer);
   countries.forEach((country) => quizView.render(country));
@@ -93,22 +105,33 @@ QuizGridView.prototype.renderQuestion = function (countries) {
 
 QuizGridView.prototype.compareQuestionAnswer = function(){
   PubSub.subscribe('QuizView:quiz-item-clicked', (evt) => {
+
+    let score = 0
     let result = ""
     if (evt.detail === this.country.name) {
       result = "Well done!,";
+      score ++;
+      setInterval(refreshQuiz(), 5000);
     } else {
       result = "Whoops,";
+      // PubSub.publish('QuizGridView:update_top_score', score);
+
     }
     const isAnswerCorrect = document.createElement('p');
-    isAnswerCorrect.textContent = `${result} that is ${evt.detail}!`
+    isAnswerCorrect.textContent = `${score} that is ${evt.detail}!`
 
     const answer = document.querySelector('#answer_item')
     answer.innerHTML = ""
     answer.appendChild(isAnswerCorrect);
   })
+};
 
+refreshQuiz = function() {
+  PubSub.publish('QuizGridView:refresh_quiz');
+};
 
-  };
+clearInterval(this.compareQuestionAnswer)
+
 
 
 
