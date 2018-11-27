@@ -18,6 +18,17 @@ Countries.prototype.getData = function(){
   .catch(console.error);
 };
 
+Countries.prototype.getAllData = function(){
+  const request = new RequestHelper('/api/geography_api');
+  request.get()
+  .then((countries) => {
+  PubSub.publish('Countries:country_data_ready', countries);
+  console.log(countries);
+
+  })
+  .catch(console.error);
+};
+
 Countries.prototype.handleData = function (countries) {
   const countryNameIDs = countries.map((country) => {
     return {
@@ -34,6 +45,7 @@ Countries.prototype.bindEvents = function () {
     const country = request.get()
     .then((country) => {
       PubSub.publish('Countries:selected-country-ready', country);
+      console.log(country);
     })
   })
 };

@@ -49,9 +49,11 @@ body {
   grid-column: auto / span 2;
   grid-row: auto / span 5;
 }
-.h {
+
+#mapid  {
   grid-column: auto / span 2;
   grid-row: auto / span 5;
+  
 }
 .i {
   grid-column: auto / span 3;
