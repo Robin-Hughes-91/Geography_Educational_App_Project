@@ -2,6 +2,7 @@
 
 .pinned-countries {
   color: black;
+  overflow: scroll;
 }
 
 /* Pinned countries header */
@@ -13,12 +14,57 @@
 }
 
 .pinned-countries-header h3 {
-  font-size: 20px;
-  margin: 10px;
+  font-size: 30px;
+  margin: 0;
+  margin-left: 80px;
+  margin-bottom: 10px;
+  padding: 15px;
+  padding-left: 22px;
+  background-image: url("/images/paper_note_heading copy.png");
+  background-size: cover;
 }
 
-.pinned-countries-header button {
+.pinned-country-add-button {
+  background-image: url("/images/blue_tack.png");
+  background-size: 70px 70px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
 
+.pinned-country-add-button:hover {
+  margin-top: 0px;
+  margin-bottom: 14px;
+}
+
+.pinned-country-add-button:active {
+  margin-top: 14px;
+  margin-bottom: 0px;
+}
+
+.pinned-country-add-button .add-button-tooltip  {
+    visibility: hidden;
+    width: 120px;
+    background-color: #A39790;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    right: 120px;
+    top: 450px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pinned-country-add-button:hover .add-button-tooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Pinned countries list */
@@ -27,16 +73,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* max-width: 450px;
-  min-width: 300px; */
+}
+
+.how-to-container {
+  position: absolute;
+  z-index: 1;
+  right: 80px;
+  top: 500px;
 }
 
 .pinned-countries-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
-  /* max-width: 450px;
-  min-width: 300px; */
+  grid-gap: 10px;
+  width: 500px;
+  justify-content: center;
 }
 
 .pinned-countries-list button {
@@ -46,49 +97,41 @@
   outline: none;
 }
 
-.pinned-countries-list button:focus {
-  /* outline: none; */
-}
-
-.pinned-countries-list button:hover {
-
-}
-
-.pinned-countries-list button:active {
-
-}
-
 /* Pinned country collapsed */
 
-.pinned-country-collapsed-container button {
-  margin-left: 5px;
-  padding-left: 3px;
-  padding-right: 3px;
+.pinned-country-collapsed-container {
+  height: 90px;
+  background-image: url("/images/paper_note_collapsed_edited.png");
+  background-size: cover;
+  display: flex;
+}
+
+.pinned-country-collapsed-name {
+  width: 170px;
+  text-align: left;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.pinned-country-collapsed-name:hover {
+  font-weight: bold;
 }
 
 .pinned-country-collapsed-container button.pinned-country-remove-button {
-  background-color: red;
-  border: 1px solid white;
-  border-radius: 5px;
-  color: white;
-  padding: 2px 4px;
-  font-size: 10px;
-  font-style: monospace;
-}
-
-.pinned-country-collapsed-container button.pinned-country-remove-button:focus {
-  background-color: darkred;
+  background-image: url("/images/blue_tack.png");
+  background-size: 50px 52px;
+  width: 50px;
+  height: 52px;
+  margin-top: 15px;
+  margin-left: 5px;
 }
 
 .pinned-country-collapsed-container button.pinned-country-remove-button:hover {
-  background-color: darkred;
+  margin-top: 18px;
 }
 
 .pinned-country-collapsed-container button.pinned-country-remove-button:active {
-  background-color: darkred;
-  padding: 1px 3px;
-  margin-top: 2px;
-  margin-left: 7px;
+  margin-top: 12px;
 }
 
 /* Pinned country details */
@@ -96,7 +139,7 @@
 .pinned-country-details {
   grid-row: 1 / 3;
   width: 300px;
-  height: 450px;
+  height: 415px;
   background-image: url("/images/paper_note_expanded_edited.png");
   background-size: cover;
   z-index: 1;
@@ -131,10 +174,15 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .pinned-country-details-name {
   margin: 0px;
+  max-width: 220px;
+  text-align: center;
+  margin-left: 15px;
+  font-size: 22px;
 }
 
 button.pinned-country-details-close-button {
@@ -166,22 +214,25 @@ button.pinned-country-details-close-button:active {
 .pinned-country-details-notes-outer-container {
   display: flex;
   justify-content: center;
+  margin-top: 0;
 }
 
 .pinned-country-details-notes-inner-container {
  width: 80%;
+ overflow: scroll;
+ max-height: 130px;
+ margin-top: 0;
 }
 
 .pinned-country-details-notes-heading {
   display: inline;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
 }
 
 .pinned-country-details-notes {
   display: inline;
-  font-size: 12px;
-  /* width: 80%; */
+  font-size: 14px;
 }
 
 /* pinned country details notes form */
@@ -194,12 +245,11 @@ button.pinned-country-notes-form-heading {
     background-color: #C2B4AD;
     color: black;
     cursor: pointer;
-    padding: 18px;
+    padding: 8px 18px;
     width: 90%;
     text-align: left;
     border: none;
     outline: none;
-    transition: 0.4s;
     margin: 0px 0px 0px 20px;
     font-size: 14px;
     text-align: center;
@@ -286,11 +336,11 @@ button.active:after {
   font-size: 14px;
 }
 
-.pinned-country-show-remove-container button.pinned-country-details-show-info-button:focus {
+/* .pinned-country-show-remove-container button.pinned-country-details-show-info-button:focus {
   outline: none;
   text-decoration: underline;
   font-weight: bold;
-}
+} */
 
 .pinned-country-show-remove-container button.pinned-country-details-show-info-button:hover {
   outline: none;
@@ -314,11 +364,11 @@ button.active:after {
   font-size: 14px;
 }
 
-.pinned-country-show-remove-container button.pinned-country-remove-button:focus {
+/* .pinned-country-show-remove-container button.pinned-country-remove-button:focus {
   outline: none;
   text-decoration: underline;
   font-weight: bold;
-}
+} */
 
 .pinned-country-show-remove-container button.pinned-country-remove-button:hover {
   outline: none;

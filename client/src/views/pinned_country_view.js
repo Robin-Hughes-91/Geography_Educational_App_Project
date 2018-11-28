@@ -9,20 +9,12 @@ const PinnedCountryView =  function (container, country) {
 // RENDER FUNCTIONS //
 //////////////////////
 
-// PinnedCountryView.prototype.render = function () {
-//   const countryContainer = this.createDiv('pinned-country-container');
-//   const details = this.renderDetails();
-//   const countryName = this.createCollapsibleButton(this.country.name, 'pinned-country-name', details);
-//   // change to showDetailsButton, call render in the event listener for that
-//   countryContainer.appendChild(countryName);
-//   countryContainer.appendChild(details);
-//   this.container.appendChild(countryContainer);
-// };
-
 PinnedCountryView.prototype.render = function () {
   const countryContainer = this.createDiv('pinned-country-collapsed-container');
+  // const pinImage = this.createImage('/images/blue_tack.png', 'Pin Graphic', 'pinned-country-collapsed-pin');
   const countryName = this.createShowDetailsButton(this.country.name, 'pinned-country-collapsed-name');
-  const removeButton = this.createRemoveButton('X');
+  const removeButton = this.createRemoveButton('');
+  // countryContainer.appendChild(pinImage);
   countryContainer.appendChild(removeButton);
   countryContainer.appendChild(countryName);
   this.container.appendChild(countryContainer);
@@ -103,7 +95,7 @@ PinnedCountryView.prototype.createShowDetailsButton = function (textContent, css
   const showDetailsButton = this.createButton(textContent, cssClass);
   showDetailsButton.addEventListener('click', () => {
     this.container.innerHTML = '';
-    this.container.style.display = "block";
+    this.container.style.display = "flex";
     const details = this.renderDetails();
     this.container.appendChild(details);
   });
@@ -156,7 +148,6 @@ PinnedCountryView.prototype.handleSubmit = function (evt) {
 ////////////////////////////////////////
 // CREATE ELEMENT FUNCTIONS (GENERIC) //
 ////////////////////////////////////////
-
 
 PinnedCountryView.prototype.createTextElement = function (type, textContent, cssClass) {
   const element = document.createElement(type);
