@@ -3,7 +3,7 @@ const mapboxgl = require('mapbox-gl');
 const PubSub = require('../helpers/pub_sub.js');
 
 const MapView = function(target) {
-    this.target = target;	
+    this.target = target;
 
 };
 
@@ -11,7 +11,7 @@ const MapView = function(target) {
 MapView.prototype.bindEvents = function () {
     this.addMap([0.5, 0.2], 0.4)
   PubSub.subscribe('Countries:selected-country-ready', (evt) => {
-    console.log('event details' ,evt.detail);
+    // console.log('event details' ,evt.detail);
     country = evt.detail;
 
     const center = country.latlng.reverse();
@@ -19,13 +19,12 @@ MapView.prototype.bindEvents = function () {
     const name = country.name;
     console.log('nativeName', country.name)
     const zoom = this.zoomRatio(area);
-    console.log('center', center);
+    // console.log('center', center);
     // const zoom = 4;
+
     this.addMap(center, zoom, name);
     
    
-   
-
 
     // this.center = evt.detail.lat
   });
@@ -73,8 +72,6 @@ function onDragEnd() {
 
     
     const mapContainer = document.querySelector('#mapid');
-
-
     const markerContainer = document.createElement('div');
     console.log('mapContainer', mapContainer)
     let coordinates = document.querySelector('#coordinates-para');
@@ -110,9 +107,6 @@ marker.on('dragend', onDragEnd);
 
 
 
-
-
-
 MapView.prototype.zoomRatio = function(area) {
     console.log('area', area)
     
@@ -121,11 +115,6 @@ MapView.prototype.zoomRatio = function(area) {
     return zoom;
 
 };
-
-
-
-
-
 
 
 

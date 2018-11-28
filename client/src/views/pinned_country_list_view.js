@@ -15,6 +15,7 @@ PinnedCountryListView.prototype.bindEvents = function () {
 
 PinnedCountryListView.prototype.render = function () {
   this.container.innerHTML = '';
+  this.container.style.display = "grid";
   this.pinnedCountries.forEach((country) => {
     const countryView = new PinnedCountryView(this.container, country);
     countryView.render();
