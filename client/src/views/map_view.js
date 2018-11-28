@@ -97,7 +97,7 @@ function onDragEnd() {
 
     // coordinates.style.zIndex = '10'; 
    
-    // const newUtterance = new SpeechSynthesisUtterance(`${coordinates.innerHTML}`);
+    // const newUtterance = new SpeechSynthesisUtterance(`'test'`);
     // newUtterance.rate = 0.8
     // speechSynthesis.speak(newUtterance)
 
