@@ -338,7 +338,6 @@ db.countries.insertMany ([
   {
   "name": "American Samoa",
   "hello": "Talofa",
-  "hello": "Hello",
   "topLevelDomain": [
   ".as"
   ],
