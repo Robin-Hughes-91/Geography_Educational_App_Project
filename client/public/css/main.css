@@ -70,6 +70,7 @@ body {
 .video {
   grid-column: auto / span 5;
   grid-row: auto / span 4;
+  background-color: transparent;
 }
 
 #mapid  {
@@ -81,11 +82,13 @@ body {
   grid-column: auto / span 3;
   grid-row: auto / span 5;
 }
+
 .pinned-countries {
   background-image: url("/images/cork-board-background.jpg");
   grid-column: auto / span 3;
   grid-row: auto / span 5;
 }
+
 .l {
 grid-column: auto / span 5;
 }
