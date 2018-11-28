@@ -11,17 +11,26 @@ body {
   min-height: 100%;
   min-width: 100%;
   margin: auto;
+
 }
 .wrapper {
 		display: grid;
     grid-gap: 5px;
 		grid-template-columns: repeat(auto-fill, minmax(5, 1fr) ) ;
-    grid-template-rows: repeat(20, 100px);
+    grid-template-rows: repeat(19, 100px);
     width: 96vw;
-    height: 97vh;
+    height: 100%;
 		background-color: #fff;
 		color: #444;
     margin: 20px;
+
+
+
+    /* grid-template-areas:
+    "a a a a a"
+    "b c d e f"
+    "g g g g g"; */
+
 
 	}
 
@@ -31,11 +40,13 @@ body {
 		border-radius: 5px;
 		padding: 10px;
 		font-size: 150%;
+
 	}
 
 .flag {
   max-width: 150px;
 }
+
 
 .a {
   grid-column: auto / span 5;
@@ -48,19 +59,77 @@ body {
 .j {
   grid-column: auto / span 2;
   grid-row: auto / span 5;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+
+
 }
-.h {
+
+.video {
+  grid-column: auto / span 5;
+  grid-row: auto / span 4;
+}
+
+#mapid  {
   grid-column: auto / span 2;
   grid-row: auto / span 5;
-}
-.i {
-  grid-column: auto / span 3;
-  grid-row: auto / span 5;
+
 }
 .k {
   grid-column: auto / span 3;
   grid-row: auto / span 5;
 }
+.pinned-countries {
+  background-image: url("/images/cork-board-background.jpg");
+  grid-column: auto / span 3;
+  grid-row: auto / span 5;
+}
 .l {
 grid-column: auto / span 5;
+}
+
+
+#flag_item {
+
+  max-height: 220px;
+  max-width:220px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 30%;
+}
+
+#answer_item {
+  position: absolute;
+  left: 0;
+  bottom: 70px;
+  right: 0;
+}
+
+#question_item {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+}
+
+p {
+  max-width: 50%;
+  margin: auto;
+}
+
+img {
+  max-width: 50%;
+  object-fit: contain;
+  padding: 5px;
+  /* max-width: 100px; */
+  flex: 25%;
+
+
 }

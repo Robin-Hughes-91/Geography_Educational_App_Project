@@ -1,24 +1,50 @@
 const Countries = require('./models/countries.js');
+const QuizView = require('./views/quiz_view.js');
+const QuizGridView = require('./views/quiz_grid_view.js');
 const CountryFlagView = require('./views/country_flag_view.js');
 const SelectView = require('./views/select_view.js');
 const CountryInfoView = require('./views/country_info_view.js');
+const MapView = require('./views/map_view.js');
+const PinnedCountryListView = require('./views/pinned_country_list_view.js');
+const PinnedCountryAddView = require('./views/pinned_country_add_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 // document.querySelector('');
 // const  = new ();
 //  .bindEvents();
 
+
+
 const selectDropdown = document.querySelector('.country-select');
 const selectView = new SelectView(selectDropdown);
 selectView.bindEvents();
 
+const mapDiv = document.querySelector('#mapid')
+const mapView = new MapView(mapDiv);
+mapView.bindEvents();
+
+const pinnedCountriesContainer = document.querySelector('.pinned-countries-list');
+const pinnedCountryListView = new PinnedCountryListView(pinnedCountriesContainer);
+pinnedCountryListView.bindEvents();
+
 const countries = new Countries();
 countries.getData();
+countries.getAllData();
 countries.bindEvents();
+countries.getNewQuestion();
+
+const pinnedCountryAddButton = document.querySelector('.pinned-country-add-button');
+console.log('pinned-country-add-button from app', pinnedCountryAddButton);
+const pinnedCountryAddView = new PinnedCountryAddView(pinnedCountryAddButton);
+pinnedCountryAddView.bindEvents();
+
+const quizDiv = document.querySelector('.j')
+const quizView = new QuizGridView(quizDiv);
+quizView.bindEvents();
 
 const countryContainer = document.querySelector('.wrapper');
 const flagBox = document.querySelector('.flag');
-console.log('app flagbox', flagBox);
+// console.log('app flagbox', flagBox);
 const countryFlagView = new CountryFlagView(countryContainer, flagBox);
 countryFlagView.bindEvents();
 
