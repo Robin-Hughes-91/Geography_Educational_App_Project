@@ -3723,7 +3723,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Chile",
-  "hello", "Hola",
+  "hello": "Hola",
   "topLevelDomain": [
   ".cl"
   ],
@@ -5542,7 +5542,6 @@ db.countries.insertMany ([
   {
   "name": "Equatorial Guinea",
   "hello": "Bonjour",
-  "hello": "Hola",
   "topLevelDomain": [
   ".gq"
   ],
