@@ -31,6 +31,7 @@ MapView.prototype.bindEvents = function () {
 
 
 MapView.prototype.addMap = function(center, zoom) {
+this.target.innerHTML = '';
 mapboxgl.accessToken = 'pk.eyJ1IjoibXJtZWxpYW5pIiwiYSI6ImNqb3cyZDhiMzFuOGQzd3BoYmFyZ2Nqa2MifQ.wwWlx7P0BnCnxbGvp-RkRA';
 const map = new mapboxgl.Map({
     container: this.target,
@@ -44,15 +45,60 @@ const map = new mapboxgl.Map({
 
 });
 
+// this.markers = [];
 
-this.markers = []
+const marker = new mapboxgl.Marker({
+   draggable: true 
+})
+  .setLngLat(center)
+  .addTo(map);
 
 const popup = new mapboxgl.Popup({closeOnClick: false})
     .setLngLat(center)
     .setHTML('<h1>Mazel מזל טוב!</h1>')
     .addTo(map);
 
+
+function onDragEnd() {
+
+    
+
+    const mapContainer = document.querySelector('#mapid');
+
+
+    const markerContainer = document.createElement('div');
+    console.log('mapContainer', mapContainer)
+    let coordinates = document.querySelector('#coordinates-para');
+
+    if (coordinates) {
+        coordinates.innerHTML = '';
+    } else {
+        coordinates = document.createElement('p');
+        coordinates.id = 'coordinates-para'
+        coordinates.classList.add('marker')
+    }
+
+    const lngLat = marker.getLngLat();
+    coordinates.style.display = 'block';
+    coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+    markerContainer.appendChild(coordinates);
+    mapContainer.appendChild(markerContainer);
+
+
+    // coordinates.style.zIndex = '10'; 
+
+}
+
+
+marker.on('dragend', onDragEnd);
+
+
 };
+
+// const newUtterance = new SpeechSynthesisUtterance(`${vocabItem.name}`);
+//      newUtterance.rate = 0.8
+//      newUtterance.pitch = 2
+//      speechSynthesis.speak(newUtterance)
 
 MapView.prototype.zoomRatio = function(area) {
     console.log('area', area)
@@ -63,55 +109,9 @@ MapView.prototype.zoomRatio = function(area) {
 
 };
 
-// MapView.prototype.addPopup = function() {
-
-// var popup = new mapboxgl.Popup({closeOnClick: false})
-//     .setLngLat([-96, 37.8])
-//     .setHTML('<h1>Hello World!</h1>')
-//     .addTo(this);
-// };
 
 
 
 
-
-
-// MapView.prototype.flyToStore = function(currentFeature) {
-//    map.flyTo({
-//     center: currentFeature.geometry.center,
-//     zoom: 15
-//   });
-// };
-
-// look at function fly to / center to the map / find in
-
-// MapView.prototype.moveto = function(element, center, zoom) {
-// mapboxgl.accessToken = 'pk.eyJ1IjoibXJtZWxpYW5pIiwiYSI6ImNqb3cyZDhiMzFuOGQzd3BoYmFyZ2Nqa2MifQ.wwWlx7P0BnCnxbGvp-RkRA';
-// const map = new mapboxgl.Map({
-//     container: this.target,
-//     // center: this.center
-//     // zoom: this.zoom,
-//     style: 'mapbox://styles/mapbox/streets-v9'
- 
-// });
-// this.markers = []
-
-
-// };
-
-// get zoom area ratio // map function
-// get a zoom ratio helper function 
-// I will do this with conditional login
-// if area size is between this and this - zoom should equal this 
-
-
-
-
-// var map = new mapboxgl.Map({
-//     container: this.target, // container id
-//     style: 'mapbox://styles/mapbox/satellite-streets-v9',
-//     center: [103.921812, 1.279844], // starting position
-//     zoom: 4 // starting zoom
-//   });
 
 module.exports = MapView;
