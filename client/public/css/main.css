@@ -77,12 +77,11 @@ body {
   grid-row: auto / span 5;
 
 }
-.k {
+.i {
   grid-column: auto / span 3;
   grid-row: auto / span 5;
 }
 .pinned-countries {
-  background-image: url("/images/cork-board-background.jpg");
   grid-column: auto / span 3;
   grid-row: auto / span 5;
 }

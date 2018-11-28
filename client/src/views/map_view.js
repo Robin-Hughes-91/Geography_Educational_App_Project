@@ -32,7 +32,7 @@ MapView.prototype.bindEvents = function () {
 
 
 MapView.prototype.addMap = function(center, zoom, name) {
-    console.log('nativeName', name)
+console.log('nativeName', name)
 this.target.innerHTML = '';
 mapboxgl.accessToken = 'pk.eyJ1IjoibXJtZWxpYW5pIiwiYSI6ImNqb3cyZDhiMzFuOGQzd3BoYmFyZ2Nqa2MifQ.wwWlx7P0BnCnxbGvp-RkRA';
 const map = new mapboxgl.Map({
@@ -62,8 +62,12 @@ const popup = new mapboxgl.Popup({closeOnClick: false})
     .addTo(map);
     console.log('nativeName', name)
     const newUtterance = new SpeechSynthesisUtterance(`${name}`);
+    console.log('newUtterance', newUtterance.text)
+    if(newUtterance.text !== 'undefined'){
     newUtterance.rate = 0.8
     speechSynthesis.speak(newUtterance)
+    }
+    
 
 
 
