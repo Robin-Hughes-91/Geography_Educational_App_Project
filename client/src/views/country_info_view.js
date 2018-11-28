@@ -29,20 +29,12 @@ CountryInfoView.prototype.render = function (country) {
   capitalContainer.appendChild(capitalParagraph);
   const populationParagraph = document.createElement('p');
   const populationContainer = document.querySelector('.e');
-  console.log('container for population', populationContainer);
   populationParagraph.textContent = `The population of ${country.name} is ${country.population}`;
-  console.log('population paragraph', populationParagraph);
   populationContainer.appendChild(populationParagraph);
-};
-
-// CountryInfoView.prototype.populateLanguageList = function (languages, list) {
-//   const languagesContainer = document.querySelector('f');
-//   languages.forEach((language) => {
-//     const languageListItem = document.createElement('li');
-//     listItem.textContent = language.name;
-//     console.log('language', language.name);
-//     languagesContainer.appendChild(listItem);
-//   });
+  const regionParagraph = document.createElement('p');
+  const regionContainer = document.querySelector('.f');
+  regionParagraph.textContent = `${country.name} is part of the ${country.region} region`;
+  regionContainer.appendChild(regionParagraph);
 };
 
 
