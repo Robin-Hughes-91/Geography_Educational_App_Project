@@ -4,6 +4,7 @@ db.countries.insertMany ([
 
   {
   "name": "Afghanistan",
+  "hello": "Senga yai",
   "topLevelDomain": [
   ".af"
   ],
@@ -92,6 +93,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Åland Islands",
+  "hello": "Hello",
   "topLevelDomain": [
   ".ax"
   ],
@@ -163,6 +165,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Albania",
+  "hello": "Tungjatjeta",
   "topLevelDomain": [
   ".al"
   ],
@@ -239,6 +242,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Algeria",
+  "hello": "Salam",
   "topLevelDomain": [
   ".dz"
   ],
@@ -333,6 +337,8 @@ db.countries.insertMany ([
   },
   {
   "name": "American Samoa",
+  "hello": "Talofa",
+  "hello": "Hello",
   "topLevelDomain": [
   ".as"
   ],
@@ -403,6 +409,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Andorra",
+  "hello": "Hola",
   "topLevelDomain": [
   ".ad"
   ],
@@ -469,6 +476,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Angola",
+  "hello": "Olá",
   "topLevelDomain": [
   ".ao"
   ],
@@ -550,6 +558,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Anguilla",
+  "hello": "Hello",
   "topLevelDomain": [
   ".ai"
   ],
@@ -611,6 +620,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Antarctica",
+  "hello": "Hello",
   "topLevelDomain": [
   ".aq"
   ],
@@ -688,6 +698,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Antigua and Barbuda",
+  "hello": "Hello",
   "topLevelDomain": [
   ".ag"
   ],
@@ -760,6 +771,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Argentina",
+  "hello": "Hola",
   "topLevelDomain": [
   ".ar"
   ],
@@ -851,6 +863,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Armenia",
+  "hello": "Barev",
   "topLevelDomain": [
   ".am"
   ],
@@ -935,6 +948,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Aruba",
+  "hello": "Kon ta bai",
   "topLevelDomain": [
   ".aw"
   ],
@@ -1002,6 +1016,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Australia",
+  "hello": "Hello",
   "topLevelDomain": [
   ".au"
   ],
@@ -1070,6 +1085,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Austria",
+  "hello": "Hallo",
   "topLevelDomain": [
   ".at"
   ],
@@ -1150,6 +1166,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Azerbaijan",
+  "hello": "Salam",
   "topLevelDomain": [
   ".az"
   ],
@@ -1219,6 +1236,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Bahamas",
+  "hello": "Hello",
   "topLevelDomain": [
   ".bs"
   ],
@@ -1292,6 +1310,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Bahrain",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".bh"
   ],
@@ -1366,6 +1385,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Bangladesh",
+  "hello": "Namaskar",
   "topLevelDomain": [
   ".bd"
   ],
@@ -1439,6 +1459,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Barbados",
+  "hello": "Hello",
   "topLevelDomain": [
   ".bb"
   ],
@@ -1511,6 +1532,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Belarus",
+  "hello": "Вітаю",
   "topLevelDomain": [
   ".by"
   ],
@@ -1604,6 +1626,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Belgium",
+  "hello": "Hallo",
   "topLevelDomain": [
   ".be"
   ],
@@ -1697,6 +1720,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Belize",
+  "hello": "Hello",
   "topLevelDomain": [
   ".bz"
   ],
@@ -1788,6 +1812,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Benin",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".bj"
   ],
@@ -1869,6 +1894,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Bermuda",
+  "hello": "Hello",
   "topLevelDomain": [
   ".bm"
   ],
@@ -1933,6 +1959,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Bhutan",
+  "hello": "Kuzu zangpo",
   "topLevelDomain": [
   ".bt"
   ],
@@ -2010,6 +2037,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Bolivia (Plurinational State of)",
+  "hello": "Hola",
   "topLevelDomain": [
   ".bo"
   ],
@@ -2112,6 +2140,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Bonaire, Sint Eustatius and Saba",
+  "hello": "Hello",
   "topLevelDomain": [
   ".an",
   ".nl"
@@ -2175,6 +2204,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Bosnia and Herzegovina",
+  "hello": "Zdravo",
   "topLevelDomain": [
   ".ba"
   ],
@@ -2227,6 +2257,7 @@ db.countries.insertMany ([
   "iso639_1": "hr",
   "iso639_2": "hrv",
   "name": "Croatian",
+  "hello": "Bok",
   "nativeName": "hrvatski jezik"
   },
   {
@@ -2261,6 +2292,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Botswana",
+  "hello": "Dumela",
   "topLevelDomain": [
   ".bw"
   ],
@@ -2348,6 +2380,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Bouvet Island",
+  "hello": "Hello",
   "topLevelDomain": [
   ".bv"
   ],
@@ -2423,6 +2456,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Brazil",
+  "hello": "Ola",
   "topLevelDomain": [
   ".br"
   ],
@@ -2517,6 +2551,7 @@ db.countries.insertMany ([
   },
   {
   "name": "British Indian Ocean Territory",
+  "hello": "Hello",
   "topLevelDomain": [
   ".io"
   ],
@@ -2591,6 +2626,7 @@ db.countries.insertMany ([
   },
   {
   "name": "United States Minor Outlying Islands",
+  "hello": "Hello",
   "topLevelDomain": [
   ".us"
   ],
@@ -2651,6 +2687,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Virgin Islands (British)",
+  "hello": "Hello",
   "topLevelDomain": [
   ".vg"
   ],
@@ -2717,6 +2754,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Virgin Islands (U.S.)",
+  "hello": "Hello",
   "topLevelDomain": [
   ".vi"
   ],
@@ -2781,6 +2819,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Brunei Darussalam",
+  "hello": "Selamat",
   "topLevelDomain": [
   ".bn"
   ],
@@ -2858,6 +2897,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Bulgaria",
+  "hello": "Zdravei",
   "topLevelDomain": [
   ".bg"
   ],
@@ -2934,6 +2974,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Burkina Faso",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".bf"
   ],
@@ -3021,6 +3062,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Burundi",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".bi"
   ],
@@ -3108,6 +3150,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Cambodia",
+  "hello": "Sua s dei",
   "topLevelDomain": [
   ".kh"
   ],
@@ -3186,6 +3229,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Cameroon",
+  "hello": "Hello",
   "topLevelDomain": [
   ".cm"
   ],
@@ -3275,6 +3319,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Canada",
+  "hello": "Hello",
   "topLevelDomain": [
   ".ca"
   ],
@@ -3359,6 +3404,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Cabo Verde",
+  "hello": "Hello",
   "topLevelDomain": [
   ".cv"
   ],
@@ -3435,6 +3481,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Cayman Islands",
+  "hello": "Hello",
   "topLevelDomain": [
   ".ky"
   ],
@@ -3496,6 +3543,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Central African Republic",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".cf"
   ],
@@ -3585,6 +3633,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Chad",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".td"
   ],
@@ -3675,6 +3724,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Chile",
+  "hello", "Hola",
   "topLevelDomain": [
   ".cl"
   ],
@@ -3767,6 +3817,7 @@ db.countries.insertMany ([
   },
   {
   "name": "China",
+  "hello": "Nǐ hǎo",
   "topLevelDomain": [
   ".cn"
   ],
@@ -3850,6 +3901,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Christmas Island",
+  "hello": "Hello",
   "topLevelDomain": [
   ".cx"
   ],
@@ -3912,6 +3964,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Cocos (Keeling) Islands",
+  "hello": "Hello",
   "topLevelDomain": [
   ".cc"
   ],
@@ -3975,6 +4028,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Colombia",
+  "hello": "Hola",
   "topLevelDomain": [
   ".co"
   ],
@@ -4068,6 +4122,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Comoros",
+  "hello": "Bariza djioni",
   "topLevelDomain": [
   ".km"
   ],
@@ -4162,6 +4217,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Congo",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".cg"
   ],
@@ -4249,6 +4305,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Congo (Democratic Republic of the)",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".cd"
   ],
@@ -4361,6 +4418,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Cook Islands",
+  "hello": "Kai orana",
   "topLevelDomain": [
   ".ck"
   ],
@@ -4428,6 +4486,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Costa Rica",
+  "hello": "Hola",
   "topLevelDomain": [
   ".cr"
   ],
@@ -4582,6 +4641,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Cuba",
+  "hello": "Hola",
   "topLevelDomain": [
   ".cu"
   ],
@@ -4650,6 +4710,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Curaçao",
+  "hello": "Hola",
   "topLevelDomain": [
   ".cw"
   ],
@@ -4728,6 +4789,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Cyprus",
+  "hello": "yia'sou",
   "topLevelDomain": [
   ".cy"
   ],
@@ -4815,6 +4877,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Czech Republic",
+  "hello": "Dobrý den",
   "topLevelDomain": [
   ".cz"
   ],
@@ -4896,6 +4959,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Denmark",
+  "hello": "Hej",
   "topLevelDomain": [
   ".dk"
   ],
@@ -4973,6 +5037,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Djibouti",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".dj"
   ],
@@ -5073,6 +5138,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Dominica",
+  "hello": "Hello",
   "topLevelDomain": [
   ".dm"
   ],
@@ -5137,6 +5203,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Dominican Republic",
+  "hello": "Hola",
   "topLevelDomain": [
   ".do"
   ],
@@ -5223,6 +5290,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Ecuador",
+  "hello": "Hola",
   "topLevelDomain": [
   ".ec"
   ],
@@ -5306,6 +5374,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Egypt",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".eg"
   ],
@@ -5395,6 +5464,7 @@ db.countries.insertMany ([
   },
   {
   "name": "El Salvador",
+  "hello": "Hola",
   "topLevelDomain": [
   ".sv"
   ],
@@ -5472,6 +5542,8 @@ db.countries.insertMany ([
   },
   {
   "name": "Equatorial Guinea",
+  "hello": "Bonjour",
+  "hello": "Hola",
   "topLevelDomain": [
   ".gq"
   ],
@@ -5559,6 +5631,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Eritrea",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".er"
   ],
@@ -5655,6 +5728,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Estonia",
+  "hello": "Tervist",
   "topLevelDomain": [
   ".ee"
   ],
@@ -5729,6 +5803,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Ethiopia",
+  "hello": "Teanastëllën",
   "topLevelDomain": [
   ".et"
   ],
@@ -5813,6 +5888,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Falkland Islands (Malvinas)",
+  "hello": "Hello",
   "topLevelDomain": [
   ".fk"
   ],
@@ -5891,6 +5967,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Faroe Islands",
+  "hello": "Hallo",
   "topLevelDomain": [
   ".fo"
   ],
@@ -5966,6 +6043,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Fiji",
+  "hello": "Hello",
   "topLevelDomain": [
   ".fj"
   ],
@@ -6049,6 +6127,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Finland",
+  "hello": "Moi",
   "topLevelDomain": [
   ".fi"
   ],
@@ -6131,6 +6210,7 @@ db.countries.insertMany ([
   },
   {
   "name": "France",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".fr"
   ],
@@ -6221,6 +6301,7 @@ db.countries.insertMany ([
   },
   {
   "name": "French Guiana",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".gf"
   ],
@@ -6309,6 +6390,7 @@ db.countries.insertMany ([
   },
   {
   "name": "French Polynesia",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".pf"
   ],
@@ -6375,6 +6457,7 @@ db.countries.insertMany ([
   },
   {
   "name": "French Southern Territories",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".tf"
   ],
@@ -6449,6 +6532,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Gabon",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".ga"
   ],
@@ -6529,6 +6613,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Gambia",
+  "hello": "Hello",
   "topLevelDomain": [
   ".gm"
   ],
@@ -6606,6 +6691,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Georgia",
+  "hello": "Gamardjobat",
   "topLevelDomain": [
   ".ge"
   ],
@@ -6673,6 +6759,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Germany",
+  "hello": "Hallo",
   "topLevelDomain": [
   ".de"
   ],
@@ -6753,6 +6840,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Ghana",
+  "hello": "Hello",
   "topLevelDomain": [
   ".gh"
   ],
@@ -6831,6 +6919,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Gibraltar",
+  "hello": "Hello",
   "topLevelDomain": [
   ".gi"
   ],
@@ -6901,6 +6990,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Greece",
+  "hello": "yia'sou",
   "topLevelDomain": [
   ".gr"
   ],
@@ -6977,6 +7067,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Greenland",
+  "hello": "Aluu",
   "topLevelDomain": [
   ".gl"
   ],
@@ -7042,6 +7133,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Grenada",
+  "hello": "Hello",
   "topLevelDomain": [
   ".gd"
   ],
@@ -7114,6 +7206,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Guadeloupe",
+  "hello": "Hello",
   "topLevelDomain": [
   ".gp"
   ],
@@ -7176,6 +7269,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Guam",
+  "hello": "Hello",
   "topLevelDomain": [
   ".gu"
   ],
@@ -7250,6 +7344,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Guatemala",
+  "hello": "Hola",
   "topLevelDomain": [
   ".gt"
   ],
@@ -7327,6 +7422,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Guernsey",
+  "hello": "Hello",
   "topLevelDomain": [
   ".gg"
   ],
@@ -7490,6 +7586,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Guinea-Bissau",
+  "hello": "Ola",
   "topLevelDomain": [
   ".gw"
   ],
@@ -7661,6 +7758,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Haiti",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".ht"
   ],
@@ -7744,6 +7842,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Heard Island and McDonald Islands",
+  "hello": "Hello",
   "topLevelDomain": [
   ".hm",
   ".aq"
@@ -7806,6 +7905,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Holy See",
+  "hello": "Hello",
   "topLevelDomain": [
   ".va"
   ],
@@ -7889,6 +7989,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Honduras",
+  "hello": "HHola",
   "topLevelDomain": [
   ".hn"
   ],
@@ -7967,6 +8068,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Hong Kong",
+  "hello": "neih hou",
   "topLevelDomain": [
   ".hk"
   ],
@@ -8037,6 +8139,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Hungary",
+  "hello": "Jó napot",
   "topLevelDomain": [
   ".hu"
   ],
@@ -8113,6 +8216,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Iceland",
+  "hello": "Góðan daginn",
   "topLevelDomain": [
   ".is"
   ],
@@ -8184,6 +8288,7 @@ db.countries.insertMany ([
   },
   {
   "name": "India",
+  "hello": "namaste",
   "topLevelDomain": [
   ".in"
   ],
@@ -8270,6 +8375,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Indonesia",
+  "hello": "Salamat",
   "topLevelDomain": [
   ".id"
   ],
@@ -8346,6 +8452,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Côte d'Ivoire",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".ci"
   ],
@@ -8429,6 +8536,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Iran (Islamic Republic of)",
+  "hello": "Salam",
   "topLevelDomain": [
   ".ir"
   ],
@@ -8500,6 +8608,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Iraq",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".iq"
   ],
@@ -8587,6 +8696,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Ireland",
+  "hello": "Haileo",
   "topLevelDomain": [
   ".ie"
   ],
@@ -8666,6 +8776,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Isle of Man",
+  "hello": "Hello",
   "topLevelDomain": [
   ".im"
   ],
@@ -8748,6 +8859,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Israel",
+  "hello": "Shalom",
   "topLevelDomain": [
   ".il"
   ],
@@ -8822,6 +8934,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Italy",
+  "hello": "Buon giorno",
   "topLevelDomain": [
   ".it"
   ],
@@ -8899,6 +9012,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Jamaica",
+  "hello": "Hello",
   "topLevelDomain": [
   ".jm"
   ],
@@ -8971,6 +9085,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Japan",
+  "hello": "Kon'nichiwa",
   "topLevelDomain": [
   ".jp"
   ],
@@ -9034,6 +9149,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Jersey",
+  "hello": "Hello",
   "topLevelDomain": [
   ".je"
   ],
@@ -9109,6 +9225,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Jordan",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".jo"
   ],
@@ -9188,6 +9305,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Kazakhstan",
+  "hello": "Salam",
   "topLevelDomain": [
   ".kz",
   ".қаз"
@@ -9280,6 +9398,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Kenya",
+  "hello": "Habari",
   "topLevelDomain": [
   ".ke"
   ],
@@ -9368,6 +9487,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Kiribati",
+  "hello": "Mauri",
   "topLevelDomain": [
   ".ki"
   ],
@@ -9438,6 +9558,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Kuwait",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".kw"
   ],
@@ -9515,6 +9636,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Kyrgyzstan",
+  "hello": "Kandisiz",
   "topLevelDomain": [
   ".kg"
   ],
@@ -9600,6 +9722,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Lao People's Democratic Republic",
+  "hello": "Hello",
   "topLevelDomain": [
   ".la"
   ],
@@ -9678,6 +9801,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Latvia",
+  "hello": "Sveiki",
   "topLevelDomain": [
   ".lv"
   ],
@@ -9753,6 +9877,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Lebanon",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".lb"
   ],
@@ -9836,6 +9961,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Lesotho",
+  "hello": "Hello",
   "topLevelDomain": [
   ".ls"
   ],
@@ -9925,6 +10051,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Liberia",
+  "hello": "Hello",
   "topLevelDomain": [
   ".lr"
   ],
@@ -10004,6 +10131,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Libya",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".ly"
   ],
@@ -10097,6 +10225,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Liechtenstein",
+  "hello": "Hallo",
   "topLevelDomain": [
   ".li"
   ],
@@ -10170,6 +10299,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Lithuania",
+  "hello": "Laba diena",
   "topLevelDomain": [
   ".lt"
   ],
@@ -10245,6 +10375,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Luxembourg",
+  "hello": "Moïen",
   "topLevelDomain": [
   ".lu"
   ],
@@ -10333,6 +10464,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Macao",
+  "hello": "neih hòa",
   "topLevelDomain": [
   ".mo"
   ],
@@ -10406,6 +10538,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Macedonia (the former Yugoslav Republic of)",
+  "hello": "Zdravo",
   "topLevelDomain": [
   ".mk"
   ],
@@ -10482,6 +10615,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Madagascar",
+  "hello": "Manao ahoana",
   "topLevelDomain": [
   ".mg"
   ],
@@ -10565,6 +10699,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Malawi",
+  "hello": "Muribwanji",
   "topLevelDomain": [
   ".mw"
   ],
@@ -10650,6 +10785,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Malaysia",
+  "hello": "Salamat",
   "topLevelDomain": [
   ".my"
   ],
@@ -10722,6 +10858,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Maldives",
+  "hello": "Kihineth",
   "topLevelDomain": [
   ".mv"
   ],
@@ -10793,6 +10930,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Mali",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".ml"
   ],
@@ -10877,6 +11015,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Malta",
+  "hello": "Bongu",
   "topLevelDomain": [
   ".mt"
   ],
@@ -10953,6 +11092,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Marshall Islands",
+  "hello": "Yokwe",
   "topLevelDomain": [
   ".mh"
   ],
@@ -11022,6 +11162,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Martinique",
+  "hello": "Hello",
   "topLevelDomain": [
   ".mq"
   ],
@@ -11083,6 +11224,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Mauritania",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".mr"
   ],
@@ -11174,6 +11316,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Mauritius",
+  "hello": "Hello",
   "topLevelDomain": [
   ".mu"
   ],
@@ -11250,6 +11393,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Mayotte",
+  "hello": "Hello",
   "topLevelDomain": [
   ".yt"
   ],
@@ -11326,6 +11470,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Mexico",
+  "hello": "Hola",
   "topLevelDomain": [
   ".mx"
   ],
@@ -11414,6 +11559,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Micronesia (Federated States of)",
+  "hello": "Hello",
   "topLevelDomain": [
   ".fm"
   ],
@@ -11482,6 +11628,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Moldova (Republic of)",
+  "hello": "Hello",
   "topLevelDomain": [
   ".md"
   ],
@@ -11527,6 +11674,7 @@ db.countries.insertMany ([
   "iso639_1": "ro",
   "iso639_2": "ron",
   "name": "Romanian",
+  "hello": "Salut",
   "nativeName": "Română"
   }
   ],
@@ -11555,6 +11703,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Monaco",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".mc"
   ],
@@ -11620,6 +11769,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Mongolia",
+  "hello": "Sain baina uu",
   "topLevelDomain": [
   ".mn"
   ],
@@ -11685,6 +11835,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Montenegro",
+  "hello": "Zdravo",
   "topLevelDomain": [
   ".me"
   ],
@@ -11778,6 +11929,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Montserrat",
+  "hello": "Hello",
   "topLevelDomain": [
   ".ms"
   ],
@@ -11850,6 +12002,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Morocco",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".ma"
   ],
@@ -11940,6 +12093,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Mozambique",
+  "hello": "Ola",
   "topLevelDomain": [
   ".mz"
   ],
@@ -12023,6 +12177,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Myanmar",
+  "hello": "Mingalarba",
   "topLevelDomain": [
   ".mm"
   ],
@@ -12100,6 +12255,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Namibia",
+  "hello": "Hello",
   "topLevelDomain": [
   ".na"
   ],
@@ -12192,6 +12348,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Nauru",
+  "hello": "Hello",
   "topLevelDomain": [
   ".nr"
   ],
@@ -12268,6 +12425,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Nepal",
+  "hello": "Namaste",
   "topLevelDomain": [
   ".np"
   ],
@@ -12341,6 +12499,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Netherlands",
+  "hello": "Hallo",
   "topLevelDomain": [
   ".nl"
   ],
@@ -12415,6 +12574,7 @@ db.countries.insertMany ([
   },
   {
   "name": "New Caledonia",
+  "hello": "Bozo",
   "topLevelDomain": [
   ".nc"
   ],
@@ -12476,6 +12636,7 @@ db.countries.insertMany ([
   },
   {
   "name": "New Zealand",
+  "hello": "Hello",
   "topLevelDomain": [
   ".nz"
   ],
@@ -12548,6 +12709,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Nicaragua",
+  "hello": "Hola",
   "topLevelDomain": [
   ".ni"
   ],
@@ -12625,6 +12787,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Niger",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".ne"
   ],
@@ -12710,6 +12873,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Nigeria",
+  "hello": "Hello",
   "topLevelDomain": [
   ".ng"
   ],
@@ -12792,6 +12956,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Niue",
+  "hello": "Faka lofa lahi atu",
   "topLevelDomain": [
   ".nu"
   ],
@@ -12858,6 +13023,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Norfolk Island",
+  "hello": "Whataway",
   "topLevelDomain": [
   ".nf"
   ],
@@ -12921,6 +13087,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Korea (Democratic People's Republic of)",
+  "hello": "yeoboseyo",
   "topLevelDomain": [
   ".kp"
   ],
@@ -12989,6 +13156,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Northern Mariana Islands",
+  "hello": "Hello",
   "topLevelDomain": [
   ".mp"
   ],
@@ -13058,6 +13226,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Norway",
+  "hello": "Hallo",
   "topLevelDomain": [
   ".no"
   ],
@@ -13147,6 +13316,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Oman",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".om"
   ],
@@ -13225,6 +13395,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Pakistan",
+  "hello": "Adaab",
   "topLevelDomain": [
   ".pk"
   ],
@@ -13307,6 +13478,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Palau",
+  "hello": "Alii",
   "topLevelDomain": [
   ".pw"
   ],
@@ -13375,6 +13547,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Palestine, State of",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".ps"
   ],
@@ -13453,6 +13626,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Panama",
+  "hello": "Hola",
   "topLevelDomain": [
   ".pa"
   ],
@@ -13535,6 +13709,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Papua New Guinea",
+  "hello": "Hello",
   "topLevelDomain": [
   ".pg"
   ],
@@ -13600,6 +13775,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Paraguay",
+  "hello": "Hola",
   "topLevelDomain": [
   ".py"
   ],
@@ -13690,6 +13866,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Peru",
+  "hello": "Hola",
   "topLevelDomain": [
   ".pe"
   ],
@@ -13783,6 +13960,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Philippines",
+  "hello": "Halo",
   "topLevelDomain": [
   ".ph"
   ],
@@ -13853,6 +14031,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Pitcairn",
+  "hello": "Hello",
   "topLevelDomain": [
   ".pn"
   ],
@@ -13920,6 +14099,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Poland",
+  "hello": "Dzień dobry",
   "topLevelDomain": [
   ".pl"
   ],
@@ -13998,6 +14178,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Portugal",
+  "hello": "Ola",
   "topLevelDomain": [
   ".pt"
   ],
@@ -14072,6 +14253,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Puerto Rico",
+  "hello": "Hola",
   "topLevelDomain": [
   ".pr"
   ],
@@ -14142,6 +14324,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Qatar",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".qa"
   ],
@@ -14218,6 +14401,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Republic of Kosovo",
+  "hello": "Dobra Otra",
   "topLevelDomain": [
   ""
   ],
@@ -14298,6 +14482,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Réunion",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".re"
   ],
@@ -14450,6 +14635,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Russian Federation",
+  "hello": "Privet",
   "topLevelDomain": [
   ".ru"
   ],
@@ -14547,6 +14733,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Rwanda",
+  "hello": "Hello",
   "topLevelDomain": [
   ".rw"
   ],
@@ -14641,6 +14828,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Saint Barthélemy",
+  "hello": "Hello",
   "topLevelDomain": [
   ".bl"
   ],
@@ -14705,6 +14893,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Saint Helena, Ascension and Tristan da Cunha",
+  "hello": "Hello",
   "topLevelDomain": [
   ".sh"
   ],
@@ -14779,6 +14968,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Saint Kitts and Nevis",
+  "hello": "Hello",
   "topLevelDomain": [
   ".kn"
   ],
@@ -14852,6 +15042,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Saint Lucia",
+  "hello": "Hello",
   "topLevelDomain": [
   ".lc"
   ],
@@ -14924,6 +15115,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Saint Martin (French part)",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".mf",
   ".fr",
@@ -15004,6 +15196,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Saint Pierre and Miquelon",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".pm"
   ],
@@ -15066,6 +15259,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Saint Vincent and the Grenadines",
+  "hello": "Hello",
   "topLevelDomain": [
   ".vc"
   ],
@@ -15207,6 +15401,7 @@ db.countries.insertMany ([
   },
   {
   "name": "San Marino",
+  "hello": "Buon giorno",
   "topLevelDomain": [
   ".sm"
   ],
@@ -15272,6 +15467,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Sao Tome and Principe",
+  "hello": "Hello",
   "topLevelDomain": [
   ".st"
   ],
@@ -15348,6 +15544,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Saudi Arabia",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".sa"
   ],
@@ -15430,6 +15627,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Senegal",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".sn"
   ],
@@ -15512,6 +15710,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Serbia",
+  "hello": "Zdravo",
   "topLevelDomain": [
   ".rs"
   ],
@@ -15593,6 +15792,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Seychelles",
+  "hello": "Hello",
   "topLevelDomain": [
   ".sc"
   ],
@@ -15676,6 +15876,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Sierra Leone",
+  "hello": "Hello",
   "topLevelDomain": [
   ".sl"
   ],
@@ -15754,6 +15955,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Singapore",
+  "hello": "Salamat",
   "topLevelDomain": [
   ".sg"
   ],
@@ -15848,6 +16050,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Sint Maarten (Dutch part)",
+  "hello": "Hallo",
   "topLevelDomain": [
   ".sx"
   ],
@@ -15917,6 +16120,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Slovakia",
+  "hello": "Dobrý deň",
   "topLevelDomain": [
   ".sk"
   ],
@@ -15993,6 +16197,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Slovenia",
+  "hello": "Živijo",
   "topLevelDomain": [
   ".si"
   ],
@@ -16068,6 +16273,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Solomon Islands",
+  "hello": "Hello",
   "topLevelDomain": [
   ".sb"
   ],
@@ -16129,6 +16335,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Somalia",
+  "hello": "Maalim wanaqsan",
   "topLevelDomain": [
   ".so"
   ],
@@ -16227,6 +16434,7 @@ db.countries.insertMany ([
   },
   {
   "name": "South Africa",
+  "hello": "Hello",
   "topLevelDomain": [
   ".za"
   ],
@@ -16365,6 +16573,7 @@ db.countries.insertMany ([
   },
   {
   "name": "South Georgia and the South Sandwich Islands",
+  "hello": "Hello",
   "topLevelDomain": [
   ".gs"
   ],
@@ -16448,6 +16657,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Korea (Republic of)",
+  "hello": "yeoboseyo",
   "topLevelDomain": [
   ".kr"
   ],
@@ -16512,6 +16722,7 @@ db.countries.insertMany ([
   },
   {
   "name": "South Sudan",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".ss"
   ],
@@ -16593,6 +16804,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Spain",
+  "hello": "Hola",
   "topLevelDomain": [
   ".es"
   ],
@@ -16670,6 +16882,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Sri Lanka",
+  "hello": "A`yubowan",
   "topLevelDomain": [
   ".lk"
   ],
@@ -16748,6 +16961,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Sudan",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".sd"
   ],
@@ -16848,6 +17062,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Suriname",
+  "hello": "Hallo",
   "topLevelDomain": [
   ".sr"
   ],
@@ -16944,6 +17159,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Svalbard and Jan Mayen",
+  "hello": "Hello",
   "topLevelDomain": [
   ".sj"
   ],
@@ -17006,6 +17222,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Swaziland",
+  "hello": "Hello",
   "topLevelDomain": [
   ".sz"
   ],
@@ -17094,6 +17311,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Sweden",
+  "hello": "God Dag",
   "topLevelDomain": [
   ".se"
   ],
@@ -17167,6 +17385,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Switzerland",
+  "hello": "Hallo",
   "topLevelDomain": [
   ".ch"
   ],
@@ -17258,6 +17477,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Syrian Arab Republic",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".sy"
   ],
@@ -17338,6 +17558,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Taiwan",
+  "hello": "lí-hó",
   "topLevelDomain": [
   ".tw"
   ],
@@ -17403,6 +17624,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Tajikistan",
+  "hello": "Salom",
   "topLevelDomain": [
   ".tj"
   ],
@@ -17479,6 +17701,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Tanzania, United Republic of",
+  "hello": "Habari",
   "topLevelDomain": [
   ".tz"
   ],
@@ -17570,6 +17793,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Thailand",
+  "hello": "Sawatdi",
   "topLevelDomain": [
   ".th"
   ],
@@ -17648,6 +17872,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Timor-Leste",
+  "hello": "Hello",
   "topLevelDomain": [
   ".tl"
   ],
@@ -17720,6 +17945,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Togo",
+  "hello": "Bonjour",
   "topLevelDomain": [
   ".tg"
   ],
@@ -17801,6 +18027,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Tokelau",
+  "hello": "Taloha",
   "topLevelDomain": [
   ".tk"
   ],
@@ -17862,6 +18089,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Tonga",
+  "hello": "Malo e lelei",
   "topLevelDomain": [
   ".to"
   ],
@@ -17929,6 +18157,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Trinidad and Tobago",
+  "hello": "Hello",
   "topLevelDomain": [
   ".tt"
   ],
@@ -18002,6 +18231,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Tunisia",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".tn"
   ],
@@ -18091,6 +18321,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Turkey",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".tr"
   ],
@@ -18164,6 +18395,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Turkmenistan",
+  "hello": "Salam",
   "topLevelDomain": [
   ".tm"
   ],
@@ -18236,6 +18468,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Turks and Caicos Islands",
+  "hello": "Hello",
   "topLevelDomain": [
   ".tc"
   ],
@@ -18297,6 +18530,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Tuvalu",
+  "hello": "Talofa",
   "topLevelDomain": [
   ".tv"
   ],
@@ -18363,6 +18597,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Uganda",
+  "hello": "Habari",
   "topLevelDomain": [
   ".ug"
   ],
@@ -18451,6 +18686,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Ukraine",
+  "hello": "Pryvit",
   "topLevelDomain": [
   ".ua"
   ],
@@ -18521,6 +18757,7 @@ db.countries.insertMany ([
   },
   {
   "name": "United Arab Emirates",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".ae"
   ],
@@ -18597,6 +18834,7 @@ db.countries.insertMany ([
   },
   {
   "name": "United Kingdom of Great Britain and Northern Ireland",
+  "hello": "Hello",
   "topLevelDomain": [
   ".uk"
   ],
@@ -18677,6 +18915,7 @@ db.countries.insertMany ([
   },
   {
   "name": "United States of America",
+  "hello": "Hello",
   "topLevelDomain": [
   ".us"
   ],
@@ -18763,6 +19002,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Uruguay",
+  "hello": "Hola",
   "topLevelDomain": [
   ".uy"
   ],
@@ -18845,6 +19085,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Uzbekistan",
+  "hello": "Salom",
   "topLevelDomain": [
   ".uz"
   ],
@@ -18921,6 +19162,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Vanuatu",
+  "hello": "Halo",
   "topLevelDomain": [
   ".vu"
   ],
@@ -18997,6 +19239,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Venezuela (Bolivarian Republic of)",
+  "hello": "Hola",
   "topLevelDomain": [
   ".ve"
   ],
@@ -19080,6 +19323,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Viet Nam",
+  "hello": "Chao",
   "topLevelDomain": [
   ".vn"
   ],
@@ -19154,6 +19398,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Wallis and Futuna",
+  "hello": "Malo le kataki",
   "topLevelDomain": [
   ".wf"
   ],
@@ -19217,6 +19462,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Western Sahara",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".eh"
   ],
@@ -19301,6 +19547,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Yemen",
+  "hello": "Marhaba",
   "topLevelDomain": [
   ".ye"
   ],
@@ -19378,6 +19625,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Zambia",
+  "hello": "Hello",
   "topLevelDomain": [
   ".zm"
   ],
@@ -19462,6 +19710,7 @@ db.countries.insertMany ([
   },
   {
   "name": "Zimbabwe",
+  "hello": "Hello",
   "topLevelDomain": [
   ".zw"
   ],
