@@ -23,8 +23,8 @@ PinnedCountryView.prototype.render = function () {
   const countryContainer = this.createDiv('pinned-country-container');
   const countryName = this.createShowDetailsButton(this.country.name, 'pinned-country-name');
   const removeButton = this.createRemoveButton('X');
-  countryContainer.appendChild(countryName);
   countryContainer.appendChild(removeButton);
+  countryContainer.appendChild(countryName);
   this.container.appendChild(countryContainer);
 };
 
