@@ -24,9 +24,6 @@ MapView.prototype.bindEvents = function () {
     // const zoom = 4;
 
     this.addMap(center, zoom, hello, name);
-    
-   
-
     // this.center = evt.detail.lat
   });
 };
@@ -40,7 +37,6 @@ const map = new mapboxgl.Map({
     container: this.target,
     center: center,
     zoom: zoom,
-
     // style: 'mapbox://styles/mapbox/streets-v9'
     // style: 'mapbox://styles/mrmeliani/cjoytjdqu9o9d2sme9xrvxz3t'
     // style: 'mapbox://styles/mrmeliani/cjoytswru62js2snv5bmone4u'
