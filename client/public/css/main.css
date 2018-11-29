@@ -46,6 +46,7 @@ body {
 
 .flag {
   max-width: 150px;
+  max-height: 100px;
 }
 
 
@@ -59,6 +60,7 @@ body {
   background-size: 120% 100%;
   background-repeat: no-repeat;
   color: black;
+  height: 120px;
 }
 
 .c {
@@ -66,6 +68,7 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   color: black;
+  height: 120px;
 }
 
 div.box.d p {
@@ -76,7 +79,9 @@ div.box.d p {
   background-image: url("/images/paper_note_heading copy.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  color: black;}
+  color: black;
+  height: 120px;
+}
 
 div.box.k p {
   font-size: 25px;
@@ -92,6 +97,7 @@ div.box.j p {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   color: black;
+  height: 120px;
 }
 
 .f {
@@ -100,6 +106,7 @@ div.box.j p {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   color: black;
+  height: 120px;
 }
 
 .g {

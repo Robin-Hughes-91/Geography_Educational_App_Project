@@ -59,8 +59,8 @@
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    right: 120px;
-    top: 450px;
+    right: 100px;
+    top: 320px;
     opacity: 0;
     transition: opacity 0.3s;
 }
