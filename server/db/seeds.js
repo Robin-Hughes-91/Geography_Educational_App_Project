@@ -2388,7 +2388,7 @@ db.countries.insertMany ([
   "callingCodes": [
   ""
   ],
-  "capital": "",
+  "capital": "Oslo",
   "altSpellings": [
   "BV",
   "Bouvetøya",
