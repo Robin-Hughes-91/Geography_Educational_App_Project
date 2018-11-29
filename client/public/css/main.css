@@ -55,6 +55,16 @@ body {
   grid-row: auto / span 1;
 }
 
+.a p {
+  background-image: url("/images/paper_note_heading copy.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: black;
+  padding: 10px 40px 10px 55px;
+  /* height: 120px;   */
+  max-width: 70%
+}
+
 .dropdown {
   background-image: url("/images/paper_note_heading copy.png");
   background-size: 120% 100%;
