@@ -52,10 +52,24 @@ body {
   grid-column: auto / span 5;
   grid-row: auto / span 1;
 }
+
+div.box.d p {
+  font-size: 15px;
+}
+
+.e {
+  font-size: 15px;
+}
+
+.f {
+  font-size: 15px;
+}
+
 .g {
   grid-column: auto / span 5;
   grid-row: auto / span 2;
 }
+
 .j {
   grid-column: auto / span 2;
   grid-row: auto / span 5;
@@ -63,8 +77,6 @@ body {
   width: 100%;
   justify-content: center;
   position: relative;
-
-
 }
 
 .video {

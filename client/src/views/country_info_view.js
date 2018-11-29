@@ -12,19 +12,19 @@ CountryInfoView.prototype.bindEvents = function () {
 
 CountryInfoView.prototype.render = function (country) {
   const capitalParagraph = document.createElement('p');
-  capitalParagraph.textContent = `The capital city of ${country.name} is ${country.capital}`;
+  capitalParagraph.textContent = `Capital City: ${country.capital}`;
   const capitalContainer = document.querySelector('.d');
   capitalContainer.innerHTML = "";
   capitalContainer.appendChild(capitalParagraph);
   const populationParagraph = document.createElement('p');
   const populationContainer = document.querySelector('.e');
   populationContainer.innerHTML = "";
-  populationParagraph.textContent = `The population of ${country.name} is ${country.population}`;
+  populationParagraph.textContent = `Population: ${country.population}`;
   populationContainer.appendChild(populationParagraph);
   const regionParagraph = document.createElement('p');
   const regionContainer = document.querySelector('.f');
   regionContainer.innerHTML = "";
-  regionParagraph.textContent = `${country.name} is part of the ${country.region} region`;
+  regionParagraph.textContent = `Region: ${country.region}`;
   regionContainer.appendChild(regionParagraph);
 };
 
