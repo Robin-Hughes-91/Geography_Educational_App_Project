@@ -24,7 +24,7 @@ MapView.prototype.bindEvents = function () {
     // console.log('center', center);
     // const zoom = 4;
 
-    this.addMap(center, zoom, hello);
+    this.addMap(center, zoom, hello, name);
     
    
 
@@ -33,7 +33,7 @@ MapView.prototype.bindEvents = function () {
 };
 
 
-MapView.prototype.addMap = function(center, zoom, hello) {
+MapView.prototype.addMap = function(center, zoom, hello, name) {
 console.log('nativeName', hello)
 this.target.innerHTML = '';
 mapboxgl.accessToken = 'pk.eyJ1IjoibXJtZWxpYW5pIiwiYSI6ImNqb3cyZDhiMzFuOGQzd3BoYmFyZ2Nqa2MifQ.wwWlx7P0BnCnxbGvp-RkRA';
@@ -64,9 +64,9 @@ const popup = new mapboxgl.Popup({closeOnClick: false})
     .setHTML(`${hello}`)
     .addTo(map);
     console.log('nativeName', hello)
-    const newUtterance = new SpeechSynthesisUtterance(`${hello}`);
-    console.log('newUtterance', newUtterance.text)
-    if(newUtterance.text !== 'undefined'){
+    const newUtterance = new SpeechSynthesisUtterance(`${hello} We are in ${name}`);
+    console.log('newUtterance', newUtterance)
+    if(newUtterance.text !== 'undefined We are in undefined'){
     newUtterance.rate = 0.8
     speechSynthesis.speak(newUtterance)
     }
