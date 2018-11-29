@@ -6,12 +6,12 @@ const CapitalQuizView = function (container) {
 
 
 CapitalQuizView.prototype.render = function (country) {
-  const flag = this.createFlag(country);
+  const capital = this.createCapital(country);
   console.log(this.container);
-  this.container.appendChild(flag);
+  this.container.appendChild(capital);
 };
 
-CapitalQuizView.prototype.createFlag = function (country) {
+CapitalQuizView.prototype.createCapital = function (country) {
   const picture = document.createElement('p');
   picture.textContent = `${country.capital}`;
   picture.id = `${country.name}`;
@@ -22,7 +22,7 @@ CapitalQuizView.prototype.createFlag = function (country) {
   });
   return picture;
 };
-// CapitalQuizView.prototype.createFlag = function (country) {
+// CapitalQuizView.prototype.createCapital = function (country) {
 //   const picture = document.createElement('img');
 //   picture.setAttribute('text', `${country.capital}`);
 //   picture.setAttribute("name", `${country.name}`);
