@@ -1,6 +1,8 @@
 const Countries = require('./models/countries.js');
 const QuizView = require('./views/quiz_view.js');
 const QuizGridView = require('./views/quiz_grid_view.js');
+const CapitalQuizView = require('./views/capital_quiz_view.js');
+const CapitalQuizGridView = require('./views/capital_quiz_grid_view.js');
 const CountryFlagView = require('./views/country_flag_view.js');
 const SelectView = require('./views/select_view.js');
 const CountryInfoView = require('./views/country_info_view.js');
@@ -29,12 +31,22 @@ pinnedCountryListView.bindEvents();
 const countries = new Countries();
 countries.getData();
 countries.getAllData();
-countries.bindEvents();
 countries.getNewQuestion();
+countries.getNewQuestionCapital()
+countries.getAllDataForCapitalsQuiz()
+countries.bindEvents();
 
-const quizDiv = document.querySelector('.j')
-const quizView = new QuizGridView(quizDiv);
-quizView.bindEvents();
+// countries.getFlagScore()
+// countries.updateScore();
+
+
+const flagQuiz = document.querySelector('')
+const flagQuizView = new QuizGridView(flagQuiz);
+flagQuizView.bindEvents();
+
+const capitalQuiz = document.querySelector('')
+const capitalQuizView = new CapitalQuizGridView(capitalQuiz);
+capitalQuizView.bindEvents();
 
 const countryContainer = document.querySelector('.wrapper');
 const flagBox = document.querySelector('.flag');

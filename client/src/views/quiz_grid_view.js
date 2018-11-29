@@ -3,8 +3,10 @@ const QuizView = require('./quiz_view.js');
 
 const QuizGridView = function (container) {
   this.container = container;
+  this.scoreTotal = 0;
 
 };
+
 
 QuizGridView.prototype.bindEvents = function () {
 
@@ -14,20 +16,24 @@ QuizGridView.prototype.bindEvents = function () {
     const randomCountryForQuestion = this.randomCountry(random);
     const createquestion = this.createQuestion(random);
     const question = this.renderQuestion(random);
-    this.compareQuestionAnswer()
-
-
-
+    this.compareQuestionAnswer();
   });
 
-  PubSub.subscribe('Countries:country_new_question_ready', (evt) => {
-    const random = this.shuffle(evt.detail);
-    const flags = this.renderFlags(random);
-    const randomCountryForQuestion = this.randomCountry(random);
-    const createquestion = this.createQuestion(random);
-    const question = this.renderQuestion(random);
-    this.compareQuestionAnswer()
-  });
+      PubSub.subscribe('Countries:country_new_question_ready', (evt) => {
+
+      const random = this.shuffle(evt.detail);
+      const flags = this.renderFlags(random);
+      const randomCountryForQuestion = this.randomCountry(random);
+      const createquestion = this.createQuestion(random);
+      const question = this.renderQuestion(random);
+
+    })
+
+    PubSub.subscribe('QuizGridView:update_current_score', (evt) => {
+      console.log(evt);
+      const createquestion = this.createScore(evt.detail);
+      const question = this.renderScore(evt.detail);
+    });
 };
 
 
@@ -52,6 +58,7 @@ QuizGridView.prototype.shuffle = function (array) {
 }
 
 QuizGridView.prototype.renderFlags = function (countries) {
+  console.log('in renderFlags()');
 
   const flagContainer = document.createElement('div');
   flagContainer.id = 'flag_item';
@@ -88,57 +95,61 @@ QuizGridView.prototype.renderQuestion = function (countries) {
   const answerContainer = document.createElement('div');
   this.container.appendChild(answerContainer);
   answerContainer.id = 'answer_item';
-
 };
 
-// QuizGridView.prototype.checkAnswer = function (random) {
-//   // PubSub.subscribe('QuizView:quiz-item-clicked', (evt) => {
-//   //   const answer = event.detail;
-//   //   // console.log('answer in checkAnswer', answer);
-//
-//
-//     const check = this.compareQuestionAnswer();
-//     // console.log(check);
-//
-//   };
+QuizGridView.prototype.renderScore = function (scores) {
+  const scoreDisplay = document.querySelector('.l')
+  const scoreContainer = document.createElement('div');
+  scoreContainer.id = 'score_item';
+
+  const score = this.createScore(scores);
+  scoreContainer.appendChild(score);
+  scoreDisplay.innerHTML = ""
+  scoreDisplay.appendChild(scoreContainer);
+};
+
+QuizGridView.prototype.createScore = function (scores) {
+  // console.log('country', this.country);
+  const score = document.createElement('p');
+  console.log(scores);
+  score.textContent = `Score ${scores}`;
+  return score;
+};
+
 
 
 QuizGridView.prototype.compareQuestionAnswer = function(){
-  PubSub.subscribe('QuizView:quiz-item-clicked', (evt) => {
+  console.log('in compareQuestionAnswer BEFORE subscribe');
+  let isAnswerCorrect = document.createElement('p');
 
-    let score = 0
+  PubSub.subscribe('QuizView:quiz-item-clicked', (evt) => {
+    console.log('in subcribe BEFORE if statement');
+     isAnswerCorrect.innerHTML = ""
+    // debugger
+    let score = null
     let result = ""
     if (evt.detail === this.country.name) {
       result = "Well done!,";
-      score ++;
-      setInterval(refreshQuiz(), 5000);
+      this.scoreTotal++
+      PubSub.publish('QuizGridView:update_current_score', this.scoreTotal);
+
+      setTimeout(() => {
+        PubSub.publish('QuizGridView:refresh_quiz')
+      }, 2000);
+
+
     } else {
       result = "Whoops,";
-      // PubSub.publish('QuizGridView:update_top_score', score);
-
     }
-    const isAnswerCorrect = document.createElement('p');
-    isAnswerCorrect.textContent = `${score} that is ${evt.detail}!`
 
+    isAnswerCorrect.textContent = `${result} that is ${evt.detail}!`
     const answer = document.querySelector('#answer_item')
-    answer.innerHTML = ""
     answer.appendChild(isAnswerCorrect);
   })
 };
 
-refreshQuiz = function() {
-  PubSub.publish('QuizGridView:refresh_quiz');
-};
-
-clearInterval(this.compareQuestionAnswer)
 
 
-
-
-
-//random repeats
-//need to refresh div
-//need to get function working
 
 
 
