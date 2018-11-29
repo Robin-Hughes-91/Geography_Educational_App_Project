@@ -92,7 +92,7 @@ CapitalQuizGridView.prototype.renderQuestion = function (countries) {
 };
 
 CapitalQuizGridView.prototype.renderScore = function (scores) {
-  const scoreDisplay = document.querySelector('.f')
+  const scoreDisplay = document.querySelector('.m')
   const scoreContainer = document.createElement('div');
   scoreContainer.id = 'score_item_capital';
 
