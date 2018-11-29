@@ -11,18 +11,20 @@ const MapView = function(target) {
 MapView.prototype.bindEvents = function () {
     this.addMap([0.5, 0.2], 0.4)
   PubSub.subscribe('Countries:selected-country-ready', (evt) => {
-    // console.log('event details' ,evt.detail);
+    console.log('event details' ,evt.detail);
     country = evt.detail;
 
     const center = country.latlng.reverse();
     const area = country.area;
     const name = country.name;
-    console.log('nativeName', country.name)
+    const hello = country.hello;
+
+    console.log('hello', country.hello)
     const zoom = this.zoomRatio(area);
     // console.log('center', center);
     // const zoom = 4;
 
-    this.addMap(center, zoom, name);
+    this.addMap(center, zoom, hello);
     
    
 
@@ -31,8 +33,8 @@ MapView.prototype.bindEvents = function () {
 };
 
 
-MapView.prototype.addMap = function(center, zoom, name) {
-console.log('nativeName', name)
+MapView.prototype.addMap = function(center, zoom, hello) {
+console.log('nativeName', hello)
 this.target.innerHTML = '';
 mapboxgl.accessToken = 'pk.eyJ1IjoibXJtZWxpYW5pIiwiYSI6ImNqb3cyZDhiMzFuOGQzd3BoYmFyZ2Nqa2MifQ.wwWlx7P0BnCnxbGvp-RkRA';
 const map = new mapboxgl.Map({
@@ -58,10 +60,11 @@ const marker = new mapboxgl.Marker({
 
 const popup = new mapboxgl.Popup({closeOnClick: false})
     .setLngLat(center)
-    .setHTML('<h1>Mazel מזל טוב!</h1>')
+    // .setHTML('<h1>Mazel מזל טוב!</h1>')
+    .setHTML(`${hello}`)
     .addTo(map);
-    console.log('nativeName', name)
-    const newUtterance = new SpeechSynthesisUtterance(`${name}`);
+    console.log('nativeName', hello)
+    const newUtterance = new SpeechSynthesisUtterance(`${hello}`);
     console.log('newUtterance', newUtterance.text)
     if(newUtterance.text !== 'undefined'){
     newUtterance.rate = 0.8
