@@ -1977,7 +1977,7 @@ db.countries.insertMany ([
   "population": 775620,
   "latlng": [
   27.5,
-  90.5
+  90.0
   ],
   "demonym": "Bhutanese",
   "area": 38394,
@@ -7360,7 +7360,7 @@ db.countries.insertMany ([
   "population": 16176133,
   "latlng": [
   15.5,
-  -90.25
+  -90.0
   ],
   "demonym": "Guatemalan",
   "area": 108889,
