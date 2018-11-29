@@ -1,4 +1,3 @@
-
 const mapboxgl = require('mapbox-gl');
 const PubSub = require('../helpers/pub_sub.js');
 
