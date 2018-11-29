@@ -5,6 +5,7 @@
 
 html {
   background-image: url('/images/cork-board-background.jpg');
+
 }
 
 
@@ -13,6 +14,7 @@ body {
   min-width: 100%;
   margin: auto;
   /* background-color: #DDE1E7; */
+  font-family: 'Aclonica'; font-size: 22px;
 }
 .wrapper {
 		display: grid;
@@ -77,8 +79,10 @@ div.box.d p {
   justify-content: center;
   position: relative;
   background-image: url("/images/paper_note_heading copy.png");
-  background-size: 658px 520px;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 .video {
@@ -119,9 +123,13 @@ grid-row: auto / span 1;
   grid-column: auto / span 3;
   grid-row: auto / span 5;
   text-align: center;
-  width: 100%;
+  width: 90%;
   justify-content: center;
   position: relative;
+  background-image: url("/images/paper_note_heading copy.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 
 
 
@@ -152,6 +160,7 @@ grid-row: auto / span 1;
   right: 0;
   margin: auto;
   height: 30%;
+  font-size: 20px
 }
 
 #answer_item {

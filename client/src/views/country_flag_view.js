@@ -7,7 +7,7 @@ const CountryFlagView = function (container, flagbox) {
 }
 
 CountryFlagView.prototype.bindEvents = function () {
-  this.flagBox.src = "https://www.telegraph.co.uk/content/dam/Travel/2017/February/flags-quiz-AP.jpg?imwidth=450";
+  this.flagBox.src = "";
   PubSub.subscribe('Countries:selected-country-ready', (evt) => {
     // this.clearCountry();
     this.render(evt.detail);
