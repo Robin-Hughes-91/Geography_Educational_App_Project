@@ -88,12 +88,19 @@ div.box.j p {
   font-size: 25px;
 }
 
+
+div.box.j img {
+  height: 100px;
+  width: 150px;
+}
+
 div.box.m p {
   font-size: 25px;
   border-style: dashed;
    border-color: black;
    text-align: center;
 }
+
 div.box.l p {
   font-size: 25px;
 border-style: dashed;
@@ -181,9 +188,6 @@ grid-row: auto / span 1;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-
-
-
 }
 
 
