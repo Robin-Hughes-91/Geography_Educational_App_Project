@@ -11,7 +11,7 @@ CapitalQuizGridView.prototype.bindEvents = function () {
 
   PubSub.subscribe('Countries:country_data_ready_capitals', (evt) => {
     const random = this.shuffle(evt.detail);
-    const flags = this.renderFlags(random);
+    const capitals = this.renderCapitals(random);
     const randomCountryForQuestion = this.randomCountry(random);
     const createquestion = this.createQuestion(random);
     const question = this.renderQuestion(random);
@@ -20,7 +20,7 @@ CapitalQuizGridView.prototype.bindEvents = function () {
 
   PubSub.subscribe('Countries:country_new_question_ready_capitals', (evt) => {
     const random = this.shuffle(evt.detail);
-    const flags = this.renderFlags(random);
+    const capitals = this.renderCapitals(random);
     const randomCountryForQuestion = this.randomCountry(random);
     const createquestion = this.createQuestion(random);
     const question = this.renderQuestion(random);
@@ -53,14 +53,14 @@ CapitalQuizGridView.prototype.shuffle = function (array) {
   return selected;
 }
 
-CapitalQuizGridView.prototype.renderFlags = function (countries) {
+CapitalQuizGridView.prototype.renderCapitals = function (countries) {
 
-  const flagContainer = document.createElement('div');
-  flagContainer.id = 'capital_item';
+  const capitalContainer = document.createElement('div');
+  capitalContainer.id = 'capital_item';
   this.container.innerHTML = '';
-  const quizView = new CapitalQuizView(flagContainer);
+  const quizView = new CapitalQuizView(capitalContainer);
   countries.forEach((country) => quizView.render(country));
-  this.container.appendChild(flagContainer);
+  this.container.appendChild(capitalContainer);
 };
 
 CapitalQuizGridView.prototype.createQuestion = function (countries) {
