@@ -18,7 +18,7 @@ body {
 }
 .wrapper {
 		display: grid;
-    grid-gap: 5px;
+    grid-gap: 50px 5px;
 		grid-template-columns: repeat(auto-fill, minmax(5, 1fr) ) ;
     grid-template-rows: repeat(19, 100px);
     width: 96vw;
@@ -56,6 +56,14 @@ body {
 
 div.box.d p {
   font-size: 15px;
+}
+
+div.box.k p {
+  font-size: 25px;
+}
+
+div.box.j p {
+  font-size: 25px;
 }
 
 .e {
@@ -146,7 +154,7 @@ grid-row: auto / span 1;
   bottom: 0;
   right: 0;
   margin: auto;
-  height: 55%;
+  height: 35%;
 }
 
 #capital_item {
@@ -166,7 +174,7 @@ grid-row: auto / span 1;
 #answer_item {
   position: absolute;
   left: 0;
-  bottom: 50px;
+  bottom: 70px;
   right: 0;
 }
 
@@ -179,9 +187,10 @@ grid-row: auto / span 1;
 
 #question_item {
   position: absolute;
-  top: 50px;
+  top: 70px;
   left: 0;
   right: 0;
+  max-height: 70px
 }
 
 p {
