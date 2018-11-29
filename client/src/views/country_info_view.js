@@ -11,6 +11,11 @@ CountryInfoView.prototype.bindEvents = function () {
 }
 
 CountryInfoView.prototype.render = function (country) {
+  const countryParagraph = document.createElement('p');
+  countryParagraph.textContent = `Your selected country is ${country.name}`;
+  const countryContainer = document.querySelector('.a');
+  countryContainer.innerHTML = "";
+  countryContainer.appendChild(countryParagraph);
   const capitalParagraph = document.createElement('p');
   capitalParagraph.textContent = `Capital City: ${country.capital}`;
   const capitalContainer = document.querySelector('.d');
