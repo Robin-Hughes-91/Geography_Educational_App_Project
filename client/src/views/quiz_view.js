@@ -7,7 +7,7 @@ const QuizView = function (container) {
 
 QuizView.prototype.render = function (country) {
   const flag = this.createFlag(country);
-  console.log(this.container);
+  // console.log(this.container);
   this.container.appendChild(flag);
 };
 

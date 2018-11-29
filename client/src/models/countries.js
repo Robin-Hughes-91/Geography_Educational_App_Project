@@ -9,7 +9,7 @@ Countries.prototype.getData = function(){
   const request = new RequestHelper('/api/geography_api');
   request.get()
   .then((countries) => {
-    console.log(countries);
+    // console.log(countries);
     const countryNames = this.handleData(countries);
     PubSub.publish('Countries:country_names_ready', countryNames);
   // console.log(countryNames);
@@ -23,7 +23,7 @@ Countries.prototype.getAllData = function(){
   request.get()
   .then((countries) => {
   PubSub.publish('Countries:country_data_ready', countries);
-  console.log(countries);
+  // console.log(countries);
   const pinnedCountries = this.getPinnedCountries(countries);
   PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
   })
@@ -91,19 +91,23 @@ Countries.prototype.bindEvents = function () {
     })
   });
 
+  this.addPinnedCountry();
   this.removePinnedCountry();
   this.addNotes();
+  this.repopulatePinnedCountries();
 };
 
 Countries.prototype.addPinnedCountry = function () {
-  PubSub.subscribe('CountryView:add-to-pinned-clicked', (evt) => {
+  PubSub.subscribe('PinnedCountryAddView:add-to-pinned-clicked', (evt) => {
     const request = new RequestHelper('/api/geography_api/pinned');
     const pinnedCountryId = evt.detail._id;
+    // console.log('pinnedCountryId from .addPinnedCountry', pinnedCountryId);
     const pinnedCountry = this.preparePinnedCountry(evt.detail, true);
+    // console.log('pinnedCountry from.addPinnedCountry', pinnedCountry);
     request.put(pinnedCountryId, pinnedCountry)
       .then((pinnedCountries) => {
         PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
-      });
+      })
   });
 };
 
@@ -125,11 +129,23 @@ Countries.prototype.addNotes = function () {
     const countryId = evt.detail._id;
     const country = evt.detail;
     delete country._id;
-    request.put(countryId, country);
-      // .then((pinnedCountries) => {
-      //   PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
-      // })
-  })
+    request.put(countryId, country)
+      .then(() => {
+        PubSub.publish('Countries:country-notes-submitted-id', countryId);
+      });
+  });
+};
+
+Countries.prototype.repopulatePinnedCountries = function () {
+  PubSub.subscribe('PinnedCountryView:close-details-clicked', () => {
+    const request = new RequestHelper('/api/geography_api');
+    request.get()
+    .then((countries) => {
+      const pinnedCountries = this.getPinnedCountries(countries);
+      PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
+    })
+    .catch(console.error);
+  });
 };
 
 Countries.prototype.preparePinnedCountry = function (country, pinnedBoolean) {

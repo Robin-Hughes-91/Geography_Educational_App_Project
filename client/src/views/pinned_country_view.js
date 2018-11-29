@@ -5,42 +5,64 @@ const PinnedCountryView =  function (container, country) {
   this.country = country;
 };
 
+//////////////////////
+// RENDER FUNCTIONS //
+//////////////////////
+
 PinnedCountryView.prototype.render = function () {
-  const countryContainer = this.createDiv('pinned-country-container');
-  const details = this.renderDetails();
-  const countryName = this.createCollapsibleButton(this.country.name, 'pinned-country-name', details);
+  const countryContainer = this.createDiv('pinned-country-collapsed-container');
+  // const pinImage = this.createImage('/images/blue_tack.png', 'Pin Graphic', 'pinned-country-collapsed-pin');
+  const countryName = this.createShowDetailsButton(this.country.name, 'pinned-country-collapsed-name');
+  const removeButton = this.createRemoveButton('');
+  // countryContainer.appendChild(pinImage);
+  countryContainer.appendChild(removeButton);
   countryContainer.appendChild(countryName);
-  countryContainer.appendChild(details);
   this.container.appendChild(countryContainer);
 };
 
 PinnedCountryView.prototype.renderDetails = function () {
   const details = this.createDiv('pinned-country-details');
-  const notesForm = this.createNotesForm();
-  const notesFormHeading = this.createCollapsibleButton('Add / Change Notes', 'pinned-country-notes-heading', notesForm);
-  const notesHeading = this.createTextElement('p', 'Notes', 'pinned-country-notes-heading');
-  const notes = this.createTextElement('p', this.country.notes, 'pinned-country-notes');
+  const pinImageContainer = this.createDiv('pinned-country-details-pin-container');
+  const pinImage = this.createImage('/images/blue_tack.png', 'Pin Graphic', 'pinned-country-details-pin');
+  const detailsHeader = this.createDiv('pinned-country-details-header');
+  const countryName = this.createTextElement('h4', this.country.name, 'pinned-country-details-name');
+  const closeDetailsButton = this.createCloseDetailsButton('X', 'pinned-country-details-close-button');
+  const detailsNotesOuterContainer = this.createDiv('pinned-country-details-notes-outer-container');
+  const detailsNotesInnerContainer = this.createDiv('pinned-country-details-notes-inner-container');
+  const notesHeading = this.createTextElement('p', 'Notes: ', 'pinned-country-details-notes-heading');
+  const notes = this.createTextElement('p', this.country.notes, 'pinned-country-details-notes');
   this.notes = notes;
+  const notesForm = this.createNotesForm();
+  const notesFormHeadingContainer = this.createDiv('pinned-country-notes-form-heading-container');
+  const notesFormHeading = this.createCollapsibleButton('Add / Change Notes', 'pinned-country-notes-form-heading', notesForm);
+  const showRemoveContainer = this.createDiv('pinned-country-show-remove-container');
   const showInfoButton = this.createShowInfoButton();
-  const removeButton = this.createRemoveButton();
-  details.appendChild(showInfoButton);
-  details.appendChild(notesHeading);
-  details.appendChild(notes);
-  details.appendChild(notesFormHeading);
+  const removeButton = this.createRemoveButton('Remove from pinned countries');
+
+  pinImageContainer.appendChild(pinImage);
+  details.appendChild(pinImageContainer);
+  detailsHeader.appendChild(countryName);
+  detailsHeader.appendChild(closeDetailsButton);
+  details.appendChild(detailsHeader);
+  detailsNotesInnerContainer.appendChild(notesHeading);
+  detailsNotesInnerContainer.appendChild(notes);
+  detailsNotesOuterContainer.appendChild(detailsNotesInnerContainer);
+  details.appendChild(detailsNotesOuterContainer);
+  notesFormHeadingContainer.appendChild(notesFormHeading);
+  details.appendChild(notesFormHeadingContainer);
   details.appendChild(notesForm);
-  details.appendChild(removeButton);
+  showRemoveContainer.appendChild(showInfoButton);
+  showRemoveContainer.appendChild(removeButton);
+  details.appendChild(showRemoveContainer);
   return details;
 };
 
-PinnedCountryView.prototype.createButton = function (textContent, cssClass) {
-  const button = document.createElement('button');
-  button.textContent = textContent;
-  button.classList.add(cssClass);
-  return button;
-};
+/////////////////////////////////////////
+// CREATE ELEMENT FUNCTIONS (SPECIFIC) //
+/////////////////////////////////////////
 
-PinnedCountryView.prototype.createRemoveButton = function () {
-  const removeButton = this.createButton('Remove from pinned countries', 'pinned-country-remove-button');
+PinnedCountryView.prototype.createRemoveButton = function (textContent) {
+  const removeButton = this.createButton(textContent, 'pinned-country-remove-button');
   removeButton.addEventListener('click', (event) => {
     PubSub.publish('PinnedCountryView:remove-button-clicked', this.country);
   });
@@ -48,7 +70,7 @@ PinnedCountryView.prototype.createRemoveButton = function () {
 };
 
 PinnedCountryView.prototype.createShowInfoButton = function () {
-  const showInfoButton = this.createButton('Show Country Info', 'pinned-country-show-info-button');
+  const showInfoButton = this.createButton('Show Country Info', 'pinned-country-details-show-info-button');
   showInfoButton.addEventListener('click', (event) => {
     PubSub.publish('Countries:selected-country-ready', this.country);
   });
@@ -58,6 +80,7 @@ PinnedCountryView.prototype.createShowInfoButton = function () {
 PinnedCountryView.prototype.createCollapsibleButton = function (textContent, cssClass, targetElement) {
   const collapsibleButton = this.createButton(textContent, cssClass);
   collapsibleButton.addEventListener('click', () => {
+    collapsibleButton.classList.toggle("active");
     if (targetElement.style.display === "block") {
       targetElement.style.display = "none";
     } else {
@@ -68,18 +91,29 @@ PinnedCountryView.prototype.createCollapsibleButton = function (textContent, css
   // targetElement MUST have (default) css display property set in stylesheet to none
 };
 
-PinnedCountryView.prototype.createTextElement = function (type, textContent, cssClass) {
-  const element = document.createElement(type);
-  element.textContent = textContent;
-  element.classList.add(cssClass);
-  return element;
+PinnedCountryView.prototype.createShowDetailsButton = function (textContent, cssClass) {
+  const showDetailsButton = this.createButton(textContent, cssClass);
+  showDetailsButton.addEventListener('click', () => {
+    this.container.innerHTML = '';
+    this.container.style.display = "flex";
+    const details = this.renderDetails();
+    this.container.appendChild(details);
+  });
+  return showDetailsButton;
 };
 
-PinnedCountryView.prototype.createDiv = function (cssClass) {
-  const div = document.createElement('div');
-  div.classList.add(cssClass);
-  return div;
+PinnedCountryView.prototype.createCloseDetailsButton = function (textContent, cssClass) {
+  const closeDetailsButton = this.createButton(textContent, cssClass);
+  closeDetailsButton.addEventListener('click', () => {
+    this.container.style.display = "grid";
+    PubSub.publish('PinnedCountryView:close-details-clicked', this.country);
+  });
+  return closeDetailsButton;
 };
+
+//////////////////////////
+// NOTES FORM FUNCTIONS //
+//////////////////////////
 
 PinnedCountryView.prototype.createNotesForm = function () {
   const formWrapper = this.createDiv('notes-form-wrapper');
@@ -104,10 +138,47 @@ PinnedCountryView.prototype.handleSubmit = function (evt) {
   evt.preventDefault();
   this.country.notes = evt.target.notes.value;
   PubSub.publish('PinnedCountryView:notes-submitted', this.country);
-  // const newNotes = document.querySelector('.pinned-country-notes');
+  PubSub.subscribe('Countries:country-notes-submitted-id', (evt) => {
+    this.country._id = evt.detail;
+  });
   this.notes.textContent = this.country.notes;
   evt.target.reset();
-  // evt.target.style.display = "none";
 };
+
+////////////////////////////////////////
+// CREATE ELEMENT FUNCTIONS (GENERIC) //
+////////////////////////////////////////
+
+PinnedCountryView.prototype.createTextElement = function (type, textContent, cssClass) {
+  const element = document.createElement(type);
+  element.textContent = textContent;
+  element.classList.add(cssClass);
+  return element;
+};
+
+PinnedCountryView.prototype.createDiv = function (cssClass) {
+  const div = document.createElement('div');
+  div.classList.add(cssClass);
+  return div;
+};
+
+PinnedCountryView.prototype.createButton = function (textContent, cssClass) {
+  const button = document.createElement('button');
+  button.textContent = textContent;
+  button.classList.add(cssClass);
+  return button;
+};
+
+PinnedCountryView.prototype.createImage = function (src, alt, cssClass) {
+  const image = document.createElement('img');
+  image.src = src;
+  image.alt = alt;
+  image.classList.add(cssClass);
+  return image;
+};
+
+////////////////////
+// MODULE EXPORTS //
+////////////////////
 
 module.exports = PinnedCountryView;
