@@ -24,25 +24,27 @@ PinnedCountryListView.prototype.render = function () {
     const countryView = new PinnedCountryView(this.container, country);
     countryView.render();
   });
-  this.renderHowToPopup();
+  // this.renderHowToPopup();
 };
-
-/////////////////////////////////////////
-// CREATE ELEMENT FUNCTIONS (SPECIFIC) //
-/////////////////////////////////////////
 
 PinnedCountryListView.prototype.renderHowToPopup = function () {
   const container = this.createDiv('how-to-container');
+  const headerBar = this.createDiv('how-to-header-bar');
   const heading = this.createTextElement('h3', 'Add pinned countries!', 'how-to-heading');
   const closeButton = this.createCloseHowToButton(container);
   const blurbText = 'To pin the current country, save it, and add your own notes, simply click on the big blue-green pin!';
   const blurb = this.createTextElement('p', blurbText, 'how-to-blurb');
 
-  container.appendChild(heading);
-  container.appendChild(closeButton);
+  headerBar.appendChild(heading);
+  headerBar.appendChild(closeButton);
+  container.appendChild(headerBar);
   container.appendChild(blurb);
   this.container.appendChild(container);
 };
+
+/////////////////////////////////////////
+// CREATE ELEMENT FUNCTIONS (SPECIFIC) //
+/////////////////////////////////////////
 
 PinnedCountryListView.prototype.createCloseHowToButton = function (container) {
   const closeButton = this.createButton('X', 'how-to-close-button');
