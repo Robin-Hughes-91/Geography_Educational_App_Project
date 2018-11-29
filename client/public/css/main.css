@@ -82,6 +82,7 @@ div.box.d p {
 .video {
   grid-column: auto / span 5;
   grid-row: auto / span 4;
+  background-color: transparent;
 }
 
 #mapid  {
@@ -89,15 +90,20 @@ div.box.d p {
   grid-row: auto / span 5;
 
 }
-.k {
+.i {
   grid-column: auto / span 3;
   grid-row: auto / span 5;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  position: relative;
 }
+
 .pinned-countries {
-  background-image: url("/images/cork-board-background.jpg");
   grid-column: auto / span 3;
   grid-row: auto / span 5;
 }
+
 .l {
 grid-column: auto / span 5;
 }
@@ -105,8 +111,20 @@ grid-column: auto / span 5;
 
 #flag_item {
 
-  max-height: 220px;
-  max-width:220px;
+  max-width:50%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 55%;
+}
+
+#capital_item {
+
+  max-width:40%;
   display: block;
   position: absolute;
   top: 0;
@@ -118,6 +136,13 @@ grid-column: auto / span 5;
 }
 
 #answer_item {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  right: 0;
+}
+
+#answer_item_capital {
   position: absolute;
   left: 0;
   bottom: 70px;
@@ -140,8 +165,4 @@ img {
   max-width: 50%;
   object-fit: contain;
   padding: 5px;
-  /* max-width: 100px; */
-  flex: 25%;
-
-
-}
+  /* max-wigit ont-family: 'Aclonica', sans-serif;*/

@@ -17,6 +17,7 @@ const createRouter = function (collection) {
       });
   });
 
+
   router.get('/:id', (req, res) => {
     const id = req.params.id;
     collection
@@ -72,7 +73,7 @@ const createRouter = function (collection) {
       });
   });
 
-  router.put('/pinned/:id', (req, res) => {
+  router.put('/scores/:id', (req, res) => {
     const id = req.params.id;
     const updatedData = req.body;
     collection
@@ -80,7 +81,7 @@ const createRouter = function (collection) {
         { _id: ObjectID(id) },
         { $set: updatedData }
       )
-      .then(() => collection.find({pinned: true}).toArray())
+      .then(() => collection.find().toArray())
       .then((docs) => res.json(docs))
       .catch((err) => {
         console.error(err);

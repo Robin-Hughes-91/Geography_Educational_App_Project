@@ -6,7 +6,9 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/map.css">
+    <link rel="stylesheet" href="./css/dropdown.css">
     <link rel="stylesheet" href="./css/pinned_countries.css">
+    <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
     <script src="./js/bundle.js"></script>
   </head>
   <body>
@@ -28,9 +30,13 @@
       <div class="box pinned-countries">
         <div class="pinned-countries-header">
           <h3>Pinned Countries</h3>
-          <button class="pinned-country-add-button">Pin current country</button>
+          <button class="pinned-country-add-button">
+            <span class="add-button-tooltip">Click here to pin the current country</span>
+          </button>
         </div>
-        <div class="pinned-countries-list"></div>
+        <div class="pinned-countries-list-container">
+          <div class="pinned-countries-list"></div>
+        </div>
       </div>
       <div class="box video">Video</div>
       <div class="box j">

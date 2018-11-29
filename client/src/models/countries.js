@@ -30,6 +30,17 @@ Countries.prototype.getAllData = function(){
   .catch(console.error);
 };
 
+Countries.prototype.getAllDataForCapitalsQuiz = function(){
+  const request = new RequestHelper('/api/geography_api');
+  request.get()
+  .then((countries) => {
+  PubSub.publish('Countries:country_data_ready_capitals', countries);
+  })
+  .catch(console.error);
+};
+
+
+
 Countries.prototype.getNewQuestion = function(){
   PubSub.subscribe('QuizGridView:refresh_quiz', (evt) => {
     const request = new RequestHelper('/api/geography_api');
@@ -39,7 +50,20 @@ Countries.prototype.getNewQuestion = function(){
       console.log(countries);
     })
     .catch(console.error);
-  });};
+  });
+};
+
+Countries.prototype.getNewQuestionCapital = function(){
+  PubSub.subscribe('CapitalQuizGridView:refresh_quiz_capital', (evt) => {
+    const request = new RequestHelper('/api/geography_api');
+    request.get()
+    .then((countries) => {
+      PubSub.publish('Countries:country_new_question_ready_capitals', countries);
+      console.log(countries);
+    })
+    .catch(console.error);
+  });
+};
 
 Countries.prototype.handleData = function (countries) {
   const countryNameIDs = countries.map((country) => {
@@ -77,9 +101,9 @@ Countries.prototype.addPinnedCountry = function () {
   PubSub.subscribe('PinnedCountryAddView:add-to-pinned-clicked', (evt) => {
     const request = new RequestHelper('/api/geography_api/pinned');
     const pinnedCountryId = evt.detail._id;
-    console.log('pinnedCountryId from .addPinnedCountry', pinnedCountryId);
+    // console.log('pinnedCountryId from .addPinnedCountry', pinnedCountryId);
     const pinnedCountry = this.preparePinnedCountry(evt.detail, true);
-    console.log('pinnedCountry from.addPinnedCountry', pinnedCountry);
+    // console.log('pinnedCountry from.addPinnedCountry', pinnedCountry);
     request.put(pinnedCountryId, pinnedCountry)
       .then((pinnedCountries) => {
         PubSub.publish('Countries:pinned-countries-ready', pinnedCountries);
@@ -130,5 +154,29 @@ Countries.prototype.preparePinnedCountry = function (country, pinnedBoolean) {
   country.pinned = pinnedBoolean;
   return pinnedCountry;
 };
+
+// Countries.prototype.getFlagScore = function(){
+//   const request = new RequestHelper('/api/scores');
+//   request.get()
+//   .then((scores) => {
+//     console.log(scores);
+//   PubSub.publish('Countries:scores_data_ready', scores);
+//   })
+//   .catch(console.error);
+// };
+
+// Countries.prototype.updateScore = function () {
+//   PubSub.subscribe('QuizGridView:update_top_score', (evt) => {
+//     console.log(evt);
+//     const request = new RequestHelper('/api/scores');
+//     let top_score_id = evt.detail._id;
+//     let new_score = evt.detail;
+//     request.put(top_score_id, new_score)
+//       .then((top_score) => {
+//         PubSub.publish('Countries:flags_top_score', top_score);
+//       });
+//   });
+// };
+
 
 module.exports = Countries;
