@@ -6,6 +6,7 @@
   /* background-image: url("/images/cork-board-background.jpg"); */
   /* background-size: cover; */
   min-width: 500px;
+  font-family: Aclonica;
 }
 
 /* Pinned countries header */
@@ -59,8 +60,8 @@
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    right: 120px;
-    top: 450px;
+    right: 100px;
+    top: 320px;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -112,7 +113,8 @@
 .pinned-country-collapsed-name {
   width: 170px;
   text-align: left;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: Aclonica;
   padding-bottom: 5px;
 }
 
@@ -142,7 +144,7 @@
 .pinned-country-details {
   grid-row: 1 / 3;
   width: 300px;
-  height: 415px;
+  height: 450px;
   background-image: url("/images/paper_note_expanded_edited.png");
   background-size: cover;
   z-index: 1;
@@ -150,6 +152,7 @@
 
 .pinned-country-details * {
   margin: 8px 0px;
+  font-family: Aclonica;
 }
 
 /* pinned country details pin */
@@ -185,7 +188,7 @@
   max-width: 220px;
   text-align: center;
   margin-left: 15px;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 button.pinned-country-details-close-button {
