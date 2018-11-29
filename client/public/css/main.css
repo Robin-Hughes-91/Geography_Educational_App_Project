@@ -82,7 +82,6 @@ div.box.d p {
 .video {
   grid-column: auto / span 5;
   grid-row: auto / span 4;
-  background-color: transparent;
 }
 
 #mapid  {
@@ -105,7 +104,22 @@ div.box.d p {
 }
 
 .l {
-grid-column: auto / span 5;
+grid-column: auto / span 2;
+grid-row: auto / span 1;
+}
+
+.m {
+grid-column: auto / span 3;
+grid-row: auto / span 1;
+}
+
+.k {
+  grid-column: auto / span 3;
+  grid-row: auto / span 5;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  position: relative;
 }
 
 

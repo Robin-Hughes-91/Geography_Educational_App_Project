@@ -41,17 +41,16 @@ countries.bindEvents();
 // countries.updateScore();
 
 
-const flagQuiz = document.querySelector('')
+const flagQuiz = document.querySelector('.j')
 const flagQuizView = new QuizGridView(flagQuiz);
 flagQuizView.bindEvents();
 
 
-const capitalQuiz = document.querySelector('')
+const capitalQuiz = document.querySelector('.k')
 const capitalQuizView = new CapitalQuizGridView(capitalQuiz);
 capitalQuizView.bindEvents();
 
 const pinnedCountryAddButton = document.querySelector('.pinned-country-add-button');
-console.log('pinned-country-add-button from app', pinnedCountryAddButton);
 const pinnedCountryAddView = new PinnedCountryAddView(pinnedCountryAddButton);
 pinnedCountryAddView.bindEvents();
 

@@ -3,6 +3,9 @@
 .pinned-countries {
   color: black;
   overflow: scroll;
+  background-image: url("/images/cork-board-background.jpg");
+  background-size: cover;
+  min-width: 500px;
 }
 
 /* Pinned countries header */
