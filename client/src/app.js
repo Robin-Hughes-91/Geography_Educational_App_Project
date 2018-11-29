@@ -51,7 +51,6 @@ const capitalQuizView = new CapitalQuizGridView(capitalQuiz);
 capitalQuizView.bindEvents();
 
 const pinnedCountryAddButton = document.querySelector('.pinned-country-add-button');
-console.log('pinned-country-add-button from app', pinnedCountryAddButton);
 const pinnedCountryAddView = new PinnedCountryAddView(pinnedCountryAddButton);
 pinnedCountryAddView.bindEvents();
 
