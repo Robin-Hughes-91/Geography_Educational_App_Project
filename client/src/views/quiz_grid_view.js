@@ -27,6 +27,7 @@ QuizGridView.prototype.bindEvents = function () {
       const createquestion = this.createQuestion(random);
       const question = this.renderQuestion(random);
 
+
     })
 
     PubSub.subscribe('QuizGridView:update_current_score', (evt) => {
@@ -135,8 +136,7 @@ QuizGridView.prototype.compareQuestionAnswer = function(){
 
       setTimeout(() => {
         PubSub.publish('QuizGridView:refresh_quiz')
-      }, 2000);
-
+      }, 2000)
 
     } else {
       result = "Whoops,";
