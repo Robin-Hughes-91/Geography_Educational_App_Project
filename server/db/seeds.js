@@ -1651,7 +1651,7 @@ db.countries.insertMany ([
   "population": 11319511,
   "latlng": [
   50.83333333,
-  4
+  4.4699
   ],
   "demonym": "Belgian",
   "area": 30528,
